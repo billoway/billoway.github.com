@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2011/12 | 点滴</title>
+  <meta name="author" content="billoway">
+  
+  <meta name="description" content="billoway">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="点滴"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/blogfavicon.png" rel="icon">
+  <link rel="alternate" href="/blogatom.xml" title="点滴" type="application/atom+xml">
+  <link rel="stylesheet" href="/blogcss/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/blog">点滴</a></h1>
+  <h2><a href="/blog">写生活、记工作</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title">2011/12</h2>
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2011-12-15T16:08:00.000Z"><a href="/blog/blog/setuid-setgid-sticky.html/">Dec 16 2011</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/blog/blog/setuid-setgid-sticky.html/">Linux下特别权限位-setuid，setgid，sticky</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>通常，我们用八进制表示一个权限时，如 644 或者 755，省略了最前面的一个特别权限位，完整地表示是 0644 或者 0755，而第一位就是特别权限位。这里着重要说的是三个特别权限位：setuid，setgid 和 sticky 位。
+<!-- More -->
+setuid 位：当文件设置了 setuid 位后，任何能够执行此文档的用户都有与文件属主相同的权限，即使得任意使用者在执行该文件时，都绑定了文件属主的权限。例如，某个程序为 root 拥有，又设置了 setuid 位，那即使是一个普通用户运行该程序，该程序的身份一样是 root 的身份，可以访问所有只有 root 可以访问的资源，设置 setuid 位的程序曾是被攻击的对象。setuid 位典型的应用是 /usr/bin/passwd，查看该文件权限显示 -rwsr-xr-x，这里的 s 表示设置了 setuid 位且该文件可由文件属主执行，如果一般用户执行该文件，则在执行过程中可以获得 root 权限，从而更改用户密码。大写 S 表示文件本来没有可执行权限并且设置了 setuid 位。
+    命令用法：chmod 4755 your_program</p>
+<p>setgid 位：与 setuid 位相似，只对目录有效，setgid 权限位被设定以后，任何用户都拥有了该文件所属组的权限，也就是能够像该文件组内成员相同运行它。另外当一个目录被配置 setgid 位后，以后用别的用户创建或者复制到这个目录下的文件，它所属的组会自动被改成目录文件所在的组，除非复制是加上 -p (preserve) 选项。
+    命令用法：chmod 2755 your_program
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/blog/blog/setuid-setgid-sticky.html/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2011-12-01T12:21:00.000Z"><a href="/blog/blog/install-xcode3-on-lion.html/">Dec 1 2011</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/blog/blog/install-xcode3-on-lion.html/">Lion 安装xcode3.2.x</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>加载 xcode 3.2.x 的 dmg 文件</li>
+<li>在 pkg 文件上右键，打开终端</li>
+<li>在终端中输入以下命令：
+<!-- More -->
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="title">export</span> <span class="type">COMMAND_LINE_INSTALL</span>=<span class="number">1</span> 
+<span class="title">cd</span> /
+<span class="title">open</span> <span class="string">"Volumes/Xcode and iOS SDK/Xcode and iOS SDK.mpkg"</span>
+</pre></td></tr></table></figure>
+搞定！</li>
+</ol>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/blog/blog/install-xcode3-on-lion.html/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:billoway.tk">
+  </form>
+</div>
+
+  
+
+  
+
+  
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 billoway
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/blogjs/jquery.imagesloaded.min.js"></script>
+<script src="/blogjs/gallery.js"></script>
+
+
+
+
+</body>
+</html>
