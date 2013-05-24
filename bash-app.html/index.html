@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2011/9 | 点滴</title>
+  <title>使用Bash脚本将build好的程序部署到iPhone上 | 点滴</title>
   <meta name="author" content="billoway">
   
   <meta name="description" content="billoway">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="使用Bash脚本将build好的程序部署到iPhone上"/>
   <meta property="og:site_name" content="点滴"/>
 
   
@@ -44,12 +44,7 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2011/9</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -59,7 +54,7 @@
       
       
   
-    <h1 class="title"><a href="/blog/bash-app.html/">使用Bash脚本将build好的程序部署到iPhone上</a></h1>
+    <h1 class="title">使用Bash脚本将build好的程序部署到iPhone上</h1>
   
 
     </header>
@@ -67,67 +62,66 @@
       
         <p>无 IDP ,iphone 需要越狱。具体的方法是先用 scp 命令将编译好的 app 复制到 iPhone 的 Applications 目录，然后用 ssh 服务连到 iPhone 上，使用 ldid 命令给 app 签注，再杀掉 SpringBoard 进程刷新界面。
 每次部署时只需使用脚本，以 iPhone 的 IP 地址作为参数即可（iPhone 上要求先安装 SSH 服务）。
+<a name="more"></a>
+1. 生成名为 rsa 的密匙文件。
+<code>ssh-keygen -t rsa</code></p>
+<ol>
+<li><p>在 iPhone 上建立.ssh 目录。
+<code>ssh root@iphoneipaddr &#39;mkdir -p .ssh&#39;</code></p>
+</li>
+<li><p>将 id_rsa.pub 文件拷贝到 iPhone 的目录上，这样使用 ssh 和 scp 命令连接 iPhone 时就不再需要每次输入 alpine 密码了。 
+<code>cat ~/.ssh/id_rsa.pub | ssh root@10.0.2.2 &#39;cat &gt;&gt; .ssh/authorized_keys&#39;</code></p>
+</li>
+<li><p>建立 installApp.sh 文件，增加执行权限
+<code>chomd +x installApp.sh</code></p>
+</li>
+<li><p>在 installApp.sh 文件中输入以下内容</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="shebang">#!/bin/sh</span>
+apppath=~/Documents/iPhone-source/foo-Project/build/Release-iphoneos/foo.app
+iphone=<span class="string">"<span class="variable">$1</span>"</span>
+<span class="comment"># login iphone to remove old files first</span>
+ssh -l <span class="string">"root"</span> <span class="string">"<span class="variable">$iphone</span>"</span> <span class="string">"rm -rf /Applications/foo.app"</span>
+<span class="comment"># copy app files to iPhone machine</span>
+scp -r <span class="variable">$apppath</span> root@<span class="variable">$iphone</span>:/Applications
+<span class="comment"># login iphone to resign app and kill SpringBoard to force refresh</span>
+ssh -l <span class="string">"root"</span> <span class="string">"<span class="variable">$iphone</span>"</span> <span class="string">"cd /Applications/foo.app; ldid -s foo; killall 9 SpringBoard"</span>
+</pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>保存之后，你就可以以 iPhone 的 IP 地址为参数执行脚本 <code>./installApp.sh 192.168.X.X</code> 来将 app 部署到 iPhone 上了.</p>
 
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/blog/bash-app.html/#more" class="more-link">Read More</a>
-          </div>
         
         
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+    
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
       <div class="clearfix"></div>
     </footer>
   </div>
 </article>
 
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2011-09-01T05:39:00.000Z"><a href="/blog/class-dump.html/">Sep 1 2011</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/blog/class-dump.html/">class dump</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类 (category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/blog/class-dump.html/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
