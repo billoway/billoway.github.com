@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mac最近打开过的项目 | 点滴</title>
+  <title>Lion 安装xcode3.2.x | 点滴</title>
   <meta name="author" content="billoway">
   
   <meta name="description" content="billoway">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Mac最近打开过的项目"/>
+  <meta property="og:title" content="Lion 安装xcode3.2.x"/>
   <meta property="og:site_name" content="点滴"/>
 
   
@@ -50,26 +50,30 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2012-03-28T08:36:00.000Z"><a href="/blog/recently-app.html/">Mar 28 2012</a></time>
+        <time datetime="2011-12-01T12:21:00.000Z"><a href="/blog/install-xcode3-on-lion.html">Dec 1 2011</a></time>
       
       
   
-    <h1 class="title">Mac最近打开过的项目</h1>
+    <h1 class="title">Lion 安装xcode3.2.x</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Mac 有一个特别有用的 Stack，“最近打开过的项目”，建立方法如下：</p>
-<p>打开 Terminal，输入以下命令:</p>
-<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>defaults write <span class="transposed_variable">com.</span><span class="transposed_variable">apple.</span>dock <span class="keyword">persistent</span>-others -array-add <span class="string">'{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'</span>
-</pre></td></tr></table></figure><a name="more"></a>
-然后再输入：</p>
-<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">Killall</span> Dock
+        <ol>
+<li>加载 xcode 3.2.x 的 dmg 文件</li>
+<li>在 pkg 文件上右键，打开终端</li>
+<li>在终端中输入以下命令：
+<!-- More -->
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="title">export</span> <span class="type">COMMAND_LINE_INSTALL</span>=<span class="number">1</span> 
+<span class="title">cd</span> /
+<span class="title">open</span> <span class="string">"Volumes/Xcode and iOS SDK/Xcode and iOS SDK.mpkg"</span>
 </pre></td></tr></table></figure>
- 搞定。</p>
+搞定！</li>
+</ol>
 
       
     </div>

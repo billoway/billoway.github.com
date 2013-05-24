@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS Address Book API 结构图型 | 点滴</title>
+  <title>Xcode4.2打开NSZombie调试EXC_BAD_ACCESS | 点滴</title>
   <meta name="author" content="billoway">
   
   <meta name="description" content="billoway">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="iOS Address Book API 结构图型"/>
+  <meta property="og:title" content="Xcode4.2打开NSZombie调试EXC_BAD_ACCESS"/>
   <meta property="og:site_name" content="点滴"/>
 
   
@@ -50,18 +50,20 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2011-08-21T11:05:00.000Z"><a href="/blog/address-api.html/">Aug 21 2011</a></time>
+        <time datetime="2012-05-02T03:53:00.000Z"><a href="/blog/EXC_BAD_ACCESS.html">May 2 2012</a></time>
       
       
   
-    <h1 class="title">iOS Address Book API 结构图型</h1>
+    <h1 class="title">Xcode4.2打开NSZombie调试EXC_BAD_ACCESS</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>iOS Address Book API 结构图型.
-最近在搞通讯录，翻出来。</p>
+        <p>在 XCode 4.2 中，有两种方法来打开 NSZombie。</p>
+<p>方法一、添加环境变量， 在菜单中，选择 <code>Product-&gt;Edit Schema</code>, 选择<code>Run (App Name)</code>, 在<code>Arguments</code>下面的<code>Environment Variables</code>中，添加<code>NSZombieEnabled</code>, <code>Value</code>值为<code>YES</code>。
+<a name="more"></a>
+方法二、打开<code>Diagnostics</code>, 同样在菜单中选择<code>Product -&gt; Edit Schema</code>, 选择<code>Run (App Name)</code>, 在<code>Diagnostics</code>下，打开<code>Memory Management</code>下的<code>Enable Zombie Objects</code>。</p>
 
       
     </div>

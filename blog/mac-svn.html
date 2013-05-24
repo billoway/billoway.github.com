@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Xcode4.2打开NSZombie调试EXC_BAD_ACCESS | 点滴</title>
+  <title>Xcode使用svn | 点滴</title>
   <meta name="author" content="billoway">
   
   <meta name="description" content="billoway">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Xcode4.2打开NSZombie调试EXC_BAD_ACCESS"/>
+  <meta property="og:title" content="Xcode使用svn"/>
   <meta property="og:site_name" content="点滴"/>
 
   
@@ -50,21 +50,34 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2012-05-02T03:53:00.000Z"><a href="/blog/EXC_BAD_ACCESS.html/">May 2 2012</a></time>
+        <time datetime="2011-07-07T06:24:00.000Z"><a href="/blog/mac-svn.html">Jul 7 2011</a></time>
       
       
   
-    <h1 class="title">Xcode4.2打开NSZombie调试EXC_BAD_ACCESS</h1>
+    <h1 class="title">Xcode使用svn</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>在 XCode 4.2 中，有两种方法来打开 NSZombie。</p>
-<p>方法一、添加环境变量， 在菜单中，选择 <code>Product-&gt;Edit Schema</code>, 选择<code>Run (App Name)</code>, 在<code>Arguments</code>下面的<code>Environment Variables</code>中，添加<code>NSZombieEnabled</code>, <code>Value</code>值为<code>YES</code>。
-<a name="more"></a>
-方法二、打开<code>Diagnostics</code>, 同样在菜单中选择<code>Product -&gt; Edit Schema</code>, 选择<code>Run (App Name)</code>, 在<code>Diagnostics</code>下，打开<code>Memory Management</code>下的<code>Enable Zombie Objects</code>。</p>
+        <p>Mac OS 自带 SVN。如果不对 SVN 进行配置，即使在 Xcode 中配置了 SCM，在 Xcode 中使用 SVN 也会有问题。</p>
+<p>1 、打开 SVN 的配置文件  <code>～/.subversion/config</code>   注意：如果 <code>.subversion</code> 目录不存在，请运行 <code>subversion</code> 命令，虽然此命令会失败，但是会为你创建所需要的文件。
+<!-- More --></p>
+<p>2 、找到 <code>global-ignores</code> 一行，去掉注释，编辑成
+<code>global-ignores = build *~.nib *.so *.pbxuser *.mode *.perspective*</code></p>
+<p>3 、找到 <code>enable-auto-props = yes</code> 把注释去掉. 变成 <code>enable-auto-props = yes</code></p>
+<p>4 、到文件结尾的<code>[auto-props]</code>节，加上下面的内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>*.mode* = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
+*.pbxuser = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
+*.perspective* = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
+*.pbxproj = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
 
+</pre></td></tr></table></figure>
       
     </div>
     <footer>
