@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2011/12 | 点滴</title>
+  <title>Linux下特别权限位-setuid，setgid，sticky | 点滴</title>
   <meta name="author" content="billoway">
   
   <meta name="description" content="billoway">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Linux下特别权限位-setuid，setgid，sticky"/>
   <meta property="og:site_name" content="点滴"/>
 
   
@@ -44,12 +44,7 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2011/12</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -59,7 +54,7 @@
       
       
   
-    <h1 class="title"><a href="/blog/setuid-setgid-sticky.html/">Linux下特别权限位-setuid，setgid，sticky</a></h1>
+    <h1 class="title">Linux下特别权限位-setuid，setgid，sticky</h1>
   
 
     </header>
@@ -71,80 +66,42 @@ setuid 位：当文件设置了 setuid 位后，任何能够执行此文档的�
     命令用法：chmod 4755 your_program</p>
 <p>setgid 位：与 setuid 位相似，只对目录有效，setgid 权限位被设定以后，任何用户都拥有了该文件所属组的权限，也就是能够像该文件组内成员相同运行它。另外当一个目录被配置 setgid 位后，以后用别的用户创建或者复制到这个目录下的文件，它所属的组会自动被改成目录文件所在的组，除非复制是加上 -p (preserve) 选项。
     命令用法：chmod 2755 your_program
+<a name="more"></a></p>
+<p>sticky 位：一般只用在目录上，可以理解为防删除位，当一个目录被设置了 sticky 位，则该目录下的文件只能由</p>
+<p>一、超级管理员删除；二、该目录的所有者删除；三、该文件的所有者删除。也就是说, 即便该目录是任何人都可以写, 但也只有文件的属主才可以删除文件。</p>
+<p>要删除一个文件，你不一定要有这个文件的写权限，但你一定要有这个文件的上级目录的写权限。也就是说，你即使没有一个文件的写权限，但你有这个文件的上级目录的写权限，你也可以把这个文件给删除，而如果没有一个目录的写权限，也就不能在这个目录下创建文件。 如何才能使一个目录既可以让任何用户写入文件，又不让用户删除这个目录下他人的文件，sticky 就是能起到这个作用。stciky 一般只用在目录上，用在文件上起不到什么作用：<a href="http://www.diybl.com/course/6_system/linux/linuxjq/2007211/15640.html"><a href="http://www.diybl.com/course/6_system/linux/linuxjq/2007211/15640.html">http://www.diybl.com/course/6_system/linux/linuxjq/2007211/15640.html</a></a>。
+典型应用为 /temp 目录，/tmp 是一个存放临时文件的目录，要求是对所有用户可写。但每个用户都只能删除自己拥有的文件。通过 ls -l |grep tmp 可以看到 /temp 的权限表述为 drwsrwsrwt，其中字母 t 代表了这个目录被设置了粘着位。相同的需求往往在 ftp 服务器的 upload 目录中也存在。
+    命令用法：chmod 1755 your_directory</p>
+<p> setuid，setgid，sticky 的八进制位分别是 4, 2, 1，助记法表示为 u+s，g+s，o+t，(删除标记位是 u-s，g-s，o-t)。
+ 可以用 ls -l 来查看权限. 如果有这些标志, 则会在原来的执行标志位置上显示. 如</p>
+<p> rwsrw-r--       表示有 setuid 标志
+ rwxrwsrw-       表示有 setgid 标志
+ rwxrw-rwt       表示有 sticky 标志</p>
+<p>那么原来的执行标志 x 到哪里去了呢? 系统是这样规定的, 如果本来在该位上有 x, 则这些特殊标志显示为小写字母 (s, s, t). 否则, 显示为大写字母 (S, S, T)。</p>
+<p>转载自： <a href="http://blog.csdn.net/shrimp51/archive/2009/05/08/4159559.aspx"><a href="http://blog.csdn.net/shrimp51/archive/2009/05/08/4159559.aspx">http://blog.csdn.net/shrimp51/archive/2009/05/08/4159559.aspx</a></a></p>
 
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/blog/setuid-setgid-sticky.html/#more" class="more-link">Read More</a>
-          </div>
         
         
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+    
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
       <div class="clearfix"></div>
     </footer>
   </div>
 </article>
 
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2011-12-01T12:21:00.000Z"><a href="/blog/install-xcode3-on-lion.html/">Dec 1 2011</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/blog/install-xcode3-on-lion.html/">Lion 安装xcode3.2.x</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ol>
-<li>加载 xcode 3.2.x 的 dmg 文件</li>
-<li>在 pkg 文件上右键，打开终端</li>
-<li>在终端中输入以下命令：
-<!-- More -->
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre><span class="title">export</span> <span class="type">COMMAND_LINE_INSTALL</span>=<span class="number">1</span> 
-<span class="title">cd</span> /
-<span class="title">open</span> <span class="string">"Volumes/Xcode and iOS SDK/Xcode and iOS SDK.mpkg"</span>
-</pre></td></tr></table></figure>
-搞定！</li>
-</ol>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/blog/install-xcode3-on-lion.html/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

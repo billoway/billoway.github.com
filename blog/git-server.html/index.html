@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mac 下配置 Git 服务器 | 点滴</title>
+  <meta name="author" content="billoway">
+  
+  <meta name="description" content="billoway">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Mac 下配置 Git 服务器"/>
+  <meta property="og:site_name" content="点滴"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">点滴</a></h1>
+  <h2><a href="/">写生活、记工作</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-07-27T03:41:00.000Z"><a href="/blog/git-server.html/">Jul 27 2012</a></time>
+      
+      
+  
+    <h1 class="title">Mac 下配置 Git 服务器</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>XCode 默认支持 Git 作为代码仓库，当我们新建一个仓库的时候，可以勾选创建默认仓库，只不过这个仓库是在本地的。本文介绍如何在 mac 机器上创建 Git 服务器，总体思路是：使用 gitosis 来简化创建过程，在用作服务器的机器上创建一个名为 git 的账户来创建 git 服务器，其他客户端通过 ssh 机制访问 git 服务器。
+<a name="more"></a></p>
+<h4>一、创建 git 账户</h4>
+<p>1，在用作服务器的机器 Server 上创建 git 账户。我们可以通过 System Preferences-&gt;accounts 来添加。在这里我添加一个 git 的 administrator 账户，administrator 不是必须的，在这里仅仅为了方便。
+2，设置远程访问
+logout 当前账户，使用 git 账户登录；在 System Preferences-&gt;Sharing 中，勾选：Web Sharing 和 Remote Logig。</p>
+<h4>二、下载安装 gitosis</h4>
+<p>1、Mac 默认已经为我们安装了 Git 和 Python，可以使用如下命令查看其版本信息：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="title">yourname</span>:~ git$ git <span class="comment">--version</span>
+<span class="title">git</span> version <span class="number">1.7</span><span class="number">.3</span><span class="number">.4</span>
+<span class="title">yourname</span>:~ git$ python <span class="comment">--version</span>
+<span class="type">Python</span> <span class="number">2.6</span><span class="number">.1</span>
+</pre></td></tr></table></figure>
+
+<p>2、通过命令 <code>git clone git://eagain.net/gitosis.git</code> 来下载 gitosis</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="method">yourname:</span>~ git<span class="char">$ </span>git clone <span class="method">git:</span>//eagain.net/gitosis.git
+<span class="class">Cloning</span> into gitosis
+<span class="method">remote:</span> <span class="class">Counting</span> <span class="method">objects:</span> <span class="number">614</span>, done.
+<span class="method">remote:</span> <span class="class">Compressing</span> <span class="method">objects:</span> <span class="number">100</span>% (<span class="number">183</span>/<span class="number">183</span>), done.
+<span class="method">remote:</span> <span class="class">Total</span> <span class="number">614</span> (delta <span class="number">434</span>), reused <span class="number">594</span> (delta <span class="number">422</span>)
+<span class="class">Receiving</span> <span class="method">objects:</span> <span class="number">100</span>% (<span class="number">614</span>/<span class="number">614</span>), <span class="number">93.82</span> <span class="class">KiB</span> | <span class="number">45</span> <span class="class">KiB</span>/s, done.
+<span class="class">Resolving</span> <span class="method">deltas:</span> <span class="number">100</span>% (<span class="number">434</span>/<span class="number">434</span>), done.
+</pre></td></tr></table></figure>
+
+<p>3，进入 gitosis 目录，使用命令 <code>sudo python setup.py install</code> 来执行 python 脚本来安装 gitosis。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="title">yourname</span>:~ git$ cd gitosis/
+<span class="title">yourname</span>:gitosis git$ sudo python setup.py install
+<span class="title">running</span> install
+<span class="title">running</span> bdist_egg
+<span class="title">running</span> egg_info
+<span class="title">creating</span> gitosis.egg-info
+……
+<span class="type">Using</span> /<span class="type">Library</span>/<span class="type">Python</span>/<span class="number">2.6</span>/site-packages/setuptools-<span class="number">0.6</span>c9-py2<span class="number">.6</span>.egg
+<span class="type">Finished</span> processing dependencies for gitosis==<span class="number">0.2</span>
+</pre></td></tr></table></figure>
+
+<p>三、制作 ssh rsa 公钥。     回到 client 机器上，制作 ssh 公钥。在这里我的使用同一台机器上的另一个账户作为 client。如果作为 client 的机器与作为 server 的机器不是同一台，也是类型的流程：制作公钥，放置到服务的 /tmp 目录下。只不过在同一台机器上，我们可以通过开启另一个 terminal，使用 su 切换到 local 账户就可以同时操作两个账户。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="label">yourname:</span>~ git$ su local_account
+<span class="label">Password:</span>
+bash-<span class="number">3.2</span>$ cd ~
+bash-<span class="number">3.2</span>$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file <span class="keyword">in</span> which to save the key (/Users/local_account/<span class="preprocessor">.ssh</span>/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved <span class="keyword">in</span> /Users/local_account/<span class="preprocessor">.ssh</span>/id_rsa.
+Your public key has been saved <span class="keyword">in</span> /Users/local_account/<span class="preprocessor">.ssh</span>/id_rsa<span class="preprocessor">.pub</span>.
+bash-<span class="number">3.2</span>$ cd <span class="preprocessor">.ssh</span>
+bash-<span class="number">3.2</span>$ ls
+id_rsa        id_rsa<span class="preprocessor">.pub</span>
+bash-<span class="number">3.2</span>$ <span class="keyword">cp</span> id_rsa<span class="preprocessor">.pub</span> /tmp/yourame<span class="preprocessor">.pub</span>
+</pre></td></tr></table></figure>
+
+<p>在上面的命令里，首先通过 su 切换到 local 账户（只有在同一台机器上才有效），然后进入到 local 账户的 home 目录，使用 ssh-keygen -t rsa 生成 id_rsa.pub，最后将该文件拷贝放置到  /tmp/yourname.pub，这样 git 账户就可以访问 yourname.pub 了，在这里改名是为了便于在 git 中辨识多个 client。</p>
+<p>四、使用 ssh 公钥初始化 gitosis。  不论你是以那种方式（邮件，usb 等等）拷贝 yourname.pub 至服务器的 /tmp/yourname.pub。下面的流程都是一样，登入服务器机器的 git 账户，进入先前提到 gitosis 目录，进行如下操作初始化 gitosis，初始化完成后，会在 git 的 home 下创建 repositories 目录。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="label">yourname:</span>gitosis git$ sudo -H -u git gitosis-init &lt<span class="comment">; /tmp/yourname.pub</span>
+Initialized empty Git repository <span class="keyword">in</span> /Users/git/repositories/gitosis-admin<span class="preprocessor">.git</span>/
+Reinitialized existing Git repository <span class="keyword">in</span> /Users/git/repositories/gitosis-admin<span class="preprocessor">.git</span>/
+</pre></td></tr></table></figure>
+
+<p>在这里，会将该 client 当做认证受信任的账户，因此在 git 的 home 目录下会有记录，文件 authorized_keys 的内容与 yourname.pub 差不多。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="method">yourname:</span>~ git<span class="char">$ </span>cd ~
+<span class="method">yourname:</span>~ git<span class="char">$ </span>cd .ssh
+<span class="method">yourname:</span>.ssh git<span class="char">$ </span>ls
+authorized_keys
+</pre></td></tr></table></figure>
+
+<p>我们需要将 authorizd_keys 稍做修改，用编辑器打开它，删除里面的 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>"command="gitosis-serve yourname",no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty " 
+</pre></td></tr></table></figure>
+这一行：
+
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="method">yourname:</span>.ssh git<span class="char">$ </span>open -e authorized_keys
+</pre></td></tr></table></figure>
+
+<p>然后，我们对 post-update 赋予可写权限，以便 client 端可以提交更改。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="method">yourname:</span>gitosis git<span class="char">$ </span>sudo chmod <span class="number">755</span> /<span class="class">Users</span>/git/repositories/gitosis-admin.git/hooks/post-update
+<span class="class">Password</span>:
+<span class="method">yourname:</span>.ssh git<span class="char">$ </span>cd ~
+<span class="method">yourname:</span>~ git<span class="char">$ </span>cd repositories/
+<span class="method">yourname:</span>repositories git<span class="char">$ </span>ls
+gitosis-admin.git
+<span class="method">yourname:</span>repositories git$
+</pre></td></tr></table></figure>
+
+<p>在上面的命令中可以看到，gitosis 也是作为仓库的形式给出，我们可以在其他账户下 checkout，然后对 gitosis 进行配置管理等等，而无需使用服务器的 git 账户进行。
+最后一步，修改 git 账户的 PATH 路径。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="method">yourname:</span>gitosis git<span class="char">$ </span>touch ~/.bashrc
+<span class="method">yourname:</span>gitosis git<span class="char">$ </span>echo <span class="class">PATH</span>=/usr/local/<span class="method">bin:</span>/usr/local/git/<span class="method">bin:</span>\<span class="char">$P</span>ATH &gt; .bashrc
+<span class="method">yourname:</span>gitosis git<span class="char">$ </span>echo export <span class="class">PATH</span> &gt;&gt; .bashrc
+<span class="method">yourname:</span>gitosis git<span class="char">$ </span>cat .bashrc
+<span class="class">PATH</span>=/usr/local/<span class="method">bin:</span>/usr/local/git/<span class="method">bin:</span><span class="char">$P</span>ATH
+export <span class="class">PATH</span>
+</pre></td></tr></table></figure>
+至此，服务器的配置完成。
+
+五、client 配置
+
+1、回到 local 账户，首先在 terminal 输入如下命令修改 local 的 git 配置：
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="comment">bash</span>-<span class="comment">3</span>.<span class="comment">2$</span> <span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">global</span> <span class="comment">user</span>.<span class="comment">name</span> <span class="comment">"yourgitname"</span>
+<span class="comment">bash</span>-<span class="comment">3</span>.<span class="comment">2$</span> <span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">global</span> <span class="comment">user</span>.<span class="comment">email</span> <span class="comment">"yourmail@yourcom</span>.<span class="comment">com"
+</pre></td></tr></table></figure>
+2、测试服务器是否连接正确，将 <code>10.1.4.211</code> 换成你服务的名称或服务器地址即可。
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="method">yourname:</span>~ local_account<span class="char">$ </span>ssh git@<span class="number">10.1</span><span class="number">.4</span><span class="number">.211</span>
+<span class="class">Last</span> <span class="method">login:</span> <span class="class">Mon</span> <span class="class">Nov</span>  <span class="number">7</span> <span class="number">13</span>:<span class="number">11</span>:<span class="number">38</span> <span class="number">2011</span> from <span class="number">10.1</span><span class="number">.4</span><span class="number">.211</span>
+</pre></td></tr></table></figure>
+3、在本地 clone 服务器仓库，下面以 gitosis-admin.git 为例：
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>bash-<span class="number">3.2</span><span class="variable">$ </span>git clone git<span class="variable">@10</span>.<span class="number">1.4</span>.<span class="number">211</span><span class="symbol">:repositories/gitosis-admin</span>.git
+<span class="constant">Cloning</span> into gitosis-admin
+<span class="symbol">remote:</span> <span class="constant">Counting</span> <span class="symbol">objects:</span> <span class="number">5</span>, done.
+<span class="symbol">remote:</span> <span class="constant">Compressing</span> <span class="symbol">objects:</span> <span class="number">100</span>% (<span class="number">5</span>/<span class="number">5</span>), done.
+<span class="symbol">remote:</span> <span class="constant">Total</span> <span class="number">5</span> (delta <span class="number">0</span>), reused <span class="number">5</span> (delta <span class="number">0</span>)
+<span class="constant">Receiving</span> <span class="symbol">objects:</span> <span class="number">100</span>% (<span class="number">5</span>/<span class="number">5</span>), done.
+bash-<span class="number">3.2</span><span class="variable">$ </span>ls
+<span class="constant">Desktop</span>        <span class="constant">InstallApp</span>    <span class="constant">Music</span>        <span class="constant">Sites</span>
+<span class="constant">Documents</span>    <span class="constant">Library</span>        <span class="constant">Pictures</span>    gitosis-admin
+<span class="constant">Downloads</span>    <span class="constant">Movies</span>        <span class="constant">Public</span>
+bash-<span class="number">3.2</span><span class="variable">$ </span>git
+</pre></td></tr></table></figure>
+在上面的输出中可以看到，我们已经成功 clone 服务器的 gitosis-admin 仓库至本地了。
+
+4、在本地管理 gitosis-admin：
+进入 gitosis-admin 目录，我们来查看一下其目录结构：gitosis.conf 文件是一个配置文件，里面定义哪些用户可以访问哪些仓库，我们可以修改这个配置；keydir 是存放 ssh 公钥的地方。
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="title">bash</span>-<span class="number">3.2</span>$ cd gitosis-admin/
+<span class="title">bash</span>-<span class="number">3.2</span>$ ls
+<span class="title">gitosis</span>.conf keydir
+<span class="title">bash</span>-<span class="number">3.2</span>$ cd keydir/
+<span class="title">bash</span>-<span class="number">3.2</span>$ ls
+<span class="title">yourname</span>.pub
+</pre></td></tr></table></figure>
+
+<p>我们只需要将其他 client 产生的 ssh 公钥添加到 keydir 目录下，并在 gitosis.conf 文件中配置这些用户可以访问的仓库 (用户名与放置在 keydir 下 sh 公钥名相同，这就是在前面我们要修改 ssh 公钥名的原因)，然后将改动提交至服务器，这样就可以让其他的 client 端访问服务器的代码仓库了。</p>
+<p>转载自：<a href="http://www.cppblog.com/kesalin/archive/2011/11/07/mac_git.html"><a href="http://www.cppblog.com/kesalin/archive/2011/11/07/mac_git.html">http://www.cppblog.com/kesalin/archive/2011/11/07/mac_git.html</a></a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+    
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:billoway.tk/blog/">
+  </form>
+</div>
+
+  
+
+  
+
+  
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 billoway
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+</body>
+</html>
