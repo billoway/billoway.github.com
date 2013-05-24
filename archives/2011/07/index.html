@@ -67,22 +67,7 @@
       
         <p>Mac OS 自带 SVN。如果不对 SVN 进行配置，即使在 Xcode 中配置了 SCM，在 Xcode 中使用 SVN 也会有问题。</p>
 <p>1 、打开 SVN 的配置文件  <code>～/.subversion/config</code>   注意：如果 <code>.subversion</code> 目录不存在，请运行 <code>subversion</code> 命令，虽然此命令会失败，但是会为你创建所需要的文件。
-<!-- More --></p>
-<p>2 、找到 <code>global-ignores</code> 一行，去掉注释，编辑成
-<code>global-ignores = build *~.nib *.so *.pbxuser *.mode *.perspective*</code></p>
-<p>3 、找到 <code>enable-auto-props = yes</code> 把注释去掉. 变成 <code>enable-auto-props = yes</code></p>
-<p>4 、到文件结尾的<code>[auto-props]</code>节，加上下面的内容：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-</pre></td><td class="code"><pre>*.mode* = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
-*.pbxuser = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
-*.perspective* = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
-*.pbxproj = svn:mime-<span class="typedef"><span class="keyword">type</span>=text/<span class="type">X</span>-xcode</span>
 
-</pre></td></tr></table></figure>
       
     </div>
     <footer>

@@ -63,8 +63,8 @@
         <p>MAC 已经自带了 SVN，所以，直接使用就好</p>
 <p>1、创建 svn repository</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>svnadmin <span class="operator"><span class="keyword">create</span> /path/svn/pro
-</pre></td></tr></table></figure><a name="more"></a>
+</pre></td><td class="code"><pre><span class="comment">svnadmin</span> <span class="comment">create</span> <span class="comment">/path/svn/pro&lt;!</span>-<span class="literal">-</span> <span class="comment">more</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">&gt;
+</pre></td></tr></table></figure>
 仓库位置，svn 是 svn 的目录，pro 是一个版本库的目录
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre>PS：这里有个歧义，按这样的方式添加 SVN 后，在启动 SVN 服务的时候，记得要用 /path/svn 这个路径，而不能用 /path/svn/pro 这个路径，不然会报 doesn<span class="attribute">'t</span> exist

@@ -65,8 +65,7 @@
     </header>
     <div class="entry">
       
-        <p>生活中，处处都是折腾。抛弃 Octopress，转到 <a href="http://zespia.tw/hexo/">hexo</a>。相比 Octopress，不管是安装使用，都很简单。 官网的文档也很详细。<a href="http://zespia.tw/hexo/"><a href="http://zespia.tw/hexo">http://zespia.tw/hexo</a></a></p>
-<p>试用了下，除了默认的主题不太漂亮，其他都还满意。</p>
+        <p>生活中，处处都是折腾。抛弃 Octopress，转到 <a href="http://zespia.tw/hexo/">hexo</a>。相比 Octopress，<a href="http://zespia.tw/hexo/">hexo</a>不管是安装还是使用，都很简单。 官网的文档也很详细。<a href="http://zespia.tw/hexo/"><a href="http://zespia.tw/hexo">http://zespia.tw/hexo</a></a>
 
       
     </div>
@@ -361,8 +360,72 @@
         <p>MAC 已经自带了 SVN，所以，直接使用就好</p>
 <p>1、创建 svn repository</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>svnadmin <span class="operator"><span class="keyword">create</span> /path/svn/pro
+</pre></td><td class="code"><pre><span class="comment">svnadmin</span> <span class="comment">create</span> <span class="comment">/path/svn/pro&lt;!</span>-<span class="literal">-</span> <span class="comment">more</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">&gt;
 </pre></td></tr></table></figure>
+仓库位置，svn 是 svn 的目录，pro 是一个版本库的目录
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>PS：这里有个歧义，按这样的方式添加 SVN 后，在启动 SVN 服务的时候，记得要用 /path/svn 这个路径，而不能用 /path/svn/pro 这个路径，不然会报 doesn<span class="attribute">'t</span> exist
+</pre></td></tr></table></figure>
+
+<p>2、配置 svn 用户权限。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>/path/svn/pro/conf/ 目录下存在<span class="number">3</span>个文件：authz,passwd,<span class="filename">svnserve.conf
+</pre></td></tr></table></figure>
+
+<p>（1）配置 svnserve.conf
+将里面的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>＃anon-access = <span class="keyword">read</span>
+＃auth-access = <span class="keyword">write</span>
+＃password-db = passwd
+＃authz-db = authz
+</pre></td></tr></table></figure>
+四行前的＃号去掉，再将 <code>anon-access = read</code> 改为 <code>anon-access = none</code>，这样禁止匿名访问
+PS：这里要注意的，在＃号后是有空格的，得去掉这个空格，上文字顶格，不然也有错误
+
+（2）配置 passwd
+里面存的是用户与密码，有示例，直接按照它的格式添加用户和密码就可以了
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="setting">test1=<span class="value"><span class="number">123</span></span></span>
+<span class="setting">test2=<span class="value"><span class="number">456</span></span></span>
+</pre></td></tr></table></figure>
+
+<p>（3）配置 authz
+[groups] 后面跟的是用户组设置，可以将你在 passwd 里设置的用户添加到不同的用户组里，那么之后，可以对不同用户组设置不同的权限，以免多用户设置麻烦，多个用户用, 号分隔。可按它的示例做</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="title">[groups]</span>
+<span class="setting">testgroups=<span class="value">test1,test2</span></span>
+</pre></td></tr></table></figure>
+之后，可以对不同的版本库进行权限设置，底下有一个示例，按它的写法写就可以了，如果需要对所有的版本库设置，利用 [/] 就可以了。如：</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="attr_selector">[/]</span>
+ <span class="at_rule">@testgroups=rm
+//PS：用户组前要用 @符号，如果是用户，直接写用户名就可以了。rm 代表可读写，显然只读就是 r 了
+</pre></td></tr></table></figure>
+3、启动 SVN 服务</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="comment">svnserve</span> <span class="literal">-</span><span class="comment">d</span> <span class="literal">-</span><span class="comment">r</span> <span class="comment">/path/svn
+</pre></td></tr></table></figure>
+特别注意，路径一定是 SVN 的目录，不是其中一个版本库的目录，不然，能正常启动，就是访问有问题
+没有任何输出，则启动成功</p>
+<p>4、启止服务 / 重启</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">kill</span> -<span class="number">9</span> svnserve
+</pre></td></tr></table></figure>
+直接删除进程，再启动服务就可以了</p>
+<p>5、测试</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="comment">svn</span> <span class="comment">checkout</span> <span class="comment">svn://127</span>.<span class="comment">0</span>.<span class="comment">0</span>.<span class="comment">1/pro</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">username=test1</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">password=123</span> <span class="string">.</span><span class="comment">/pro
+</pre></td></tr></table></figure>
+转载自: <a href="http://www.cnblogs.com/onlyfu/archive/2012/05/08/2489814.html"><a href="http://www.cnblogs.com/onlyfu/archive/2012/05/08/2489814.html">http://www.cnblogs.com/onlyfu/archive/2012/05/08/2489814.html</a></a></p>
+
       
     </div>
     <footer>
