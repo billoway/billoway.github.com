@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Mac最近打开过的项目"
+date: 2012-03-28 16:36
+comments: true
+tags: 
+---
+
+Mac有一个特别有用的Stack，“最近打开过的项目”，建立方法如下：
+
+打开Terminal，输入以下命令:
+```
+defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'<!-- more -->
+```
+然后再输入：
+```
+Killall Dock
+```
+ 搞定。

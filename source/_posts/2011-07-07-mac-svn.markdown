@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Xcode使用svn"
+date: 2011-07-07 14:24
+comments: true
+tags: 
+---
+
+Mac OS自带SVN。如果不对SVN进行配置，即使在Xcode中配置了SCM，在Xcode中使用SVN也会有问题。
+
+1 、打开SVN的配置文件  `～/.subversion/config`   注意：如果 `.subversion` 目录不存在，请运行 `subversion` 命令，虽然此命令会失败，但是会为你创建所需要的文件。
+<!-- more -->
+
+2 、找到 `global-ignores` 一行，去掉注释，编辑成
+`global-ignores = build *~.nib *.so *.pbxuser *.mode *.perspective*`
+
+3 、找到 `enable-auto-props = yes` 把注释去掉.变成 `enable-auto-props = yes`
+
+4 、到文件结尾的`[auto-props]`节，加上下面的内容：
+
+```
+*.mode* = svn:mime-type=text/X-xcode
+*.pbxuser = svn:mime-type=text/X-xcode
+*.perspective* = svn:mime-type=text/X-xcode
+*.pbxproj = svn:mime-type=text/X-xcode
+
+```

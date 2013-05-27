@@ -1,0 +1,68 @@
+---
+layout: post
+title: "Homebrew"
+date: 2013-05-12 10:20
+comments: true
+tags: 
+---
+
+[Homebrew](http://mxcl.github.io/homebrew/) installs the stuff you need that Apple didn’t.
+
+### 安装 ###
+<!-- more -->
+[Homebrew](http://mxcl.github.io/homebrew/)依赖于XCode，首先需要安装，lion后XCode也是免费的了，直接到App store下载。同时Homebrew也依赖ruby，Mac已经自带ruby。
+
+```
+ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
+```
+
+### 使用 ###
+```
+Example usage:
+  brew [info | home | options ] [FORMULA...]
+  brew install FORMULA...
+  brew uninstall FORMULA...
+  brew search [foo]
+  brew list [FORMULA...]
+  brew update
+  brew upgrade [FORMULA...]
+
+Troubleshooting:
+  brew doctor
+  brew install -vd FORMULA
+  brew [--env | --config]
+
+Brewing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+  open https://github.com/mxcl/homebrew/wiki/Formula-Cookbook
+
+Further help:
+  man brew
+  brew home
+```
+
+程序安装路径及文件夹
+
+Homebrew将本地的/usr/local初始化为git的工作树，并将目录所有者变更为当前所操作的用户，以后的操作将不需要sudo。
+```
+-bin          用于存放所安装程序的启动链接（相当于快捷方式）
+-Cellar       所以brew安装的程序，都将以[程序名/版本号]存放于本目录下
+-etc          brew安装程序的配置文件默认存放路径
+-Library      Homebrew 系统自身文件夹
++–Formula     程序的下载路径和编译参数及安装路径等配置文件存放地
++–Homebrew    brew程序自身命令集
+```
+
+
+### Fink、macports 跟 Homebrew ###
+[比较Fink、macports 跟 Homebrew](http://www.myexception.cn/brew/412107.html)
+
+Fink 没有用过，不发表观点。
+
+实在受不了 macports 的管理方式，太臃肿了，所有依赖包全部重新装。
+
+Homebrew却恰恰相反，它能自动判断当前机器的程序包的状况，自动和系统中已经有的程序包整合在一起，轻巧、智能。
+
+Homebrew 声明自己和 MacPorts 和 Fink 不兼容，用它就不要用 MacPorts(或Fink)，用 MacPorts(或Fink) 就不要用它，够绝，哈哈……！
+
