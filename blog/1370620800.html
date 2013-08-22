@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>编程高手与调试高手 【读书笔记】 | 点滴</title>
+  <meta name="author" content="billoway">
+  
+  <meta name="description" content="billoway">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="编程高手与调试高手 【读书笔记】"/>
+  <meta property="og:site_name" content="点滴"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">点滴</a></h1>
+  <h2><a href="/">写生活、记工作</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-06-08T10:08:23.000Z"><a href="/blog/1370620800.html">Jun 8 2013</a></time>
+      
+      
+  
+    <h1 class="title">编程高手与调试高手 【读书笔记】</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>业界总是有高手之说，高手成了程序员心中之偶像，成了程序员成长之目标。但是，现实中人们往往对自己所了解的程序员，很难认同为高手；人们反而对那些自己不了解的，甚至是道听途说的人会认作为高手了。高手，同武林高手一样，神秘之至。
+<a name="more"></a>
+　　许多程序员都有这样的经历：无论自己编写什么很短很短的程序，一般是很难一次就能通过编译的；通过编译的其功能还不一定是正确的。我在很早就注意这样现象了，开始的时候，我还不信这个邪，还试着编写程序看看自己能否一次能否编译成功，为这个事还和别人打过赌呢！这当然是年轻时做过的事了。后来我渐渐明白了，编程出错是编程的一个重要的部分！出错是正常的，不出错才是不正常的。出错怎么办？当然是改错啦！不知道错在什么地方怎么办？当然是调试啦！调试于是和编程相依相伴了。程序员不但要会编写程序，还要会调试程序。</p>
+<p>　　程序出错一般有：未定义、语法、运行出错三个方面。</p>
+<h3>未定义</h3>
+<p>　　未定义往往是程序员的忽略定义或定义后名称与定义不一致造成的。</p>
+<p>　　要避免忽略定义这个问题，程序员首先要养成严谨工作的习惯：“先定义，后使用”。
+解决定义名字与使用名字不一致问题，程序员在对函数名、变量名、文件名、数据库名、表名、字段名定义的时候，不要信手拈来，象不花钱似的任意取名。一定要定下心来慢慢地斟酌，这个名字自己不但要能懂能记得，别人一看也要能懂能记得。程序员可以假设自己定义一个变量就要花出去 100 元钱，如果别人看不懂就要另外支付 200 元。有了这种名字的“有偿使用”，这样程序员就不可能乱取名了。长此以往，在使用这些名字的时候程序员就会有行云流水感觉，而且很少出错。</p>
+<h3>语法问题</h3>
+<p>　　新手编程走一步一个跟头，走两步两个跟头，主要是对语言的语法不熟悉，丢三拉四，关键字拚错等。这种情况不可怕，多看看语法说明，多改改程序就会对语法越来越熟悉了。</p>
+<p>　　老程序员语法问题出现较少。但是，很多情况下程序员在使用新语言编程序的时候，会采用老语言的语法，反之亦然，导致出错。例如，某人先使用 C 语言，后使用 VFP。当用 VFP 编程的时候，往往习惯性地在语句后面加上“；”，这导致 VFP 语法出错。当熟悉 VFP 后，再编写 C 语言的时候，往往在语句后面忘记加上“；”，导致 C 语言语法出错。类似常见问题如：IF 语句后面表达式是否要加“（）”等，for 语句，while 语句，case 语句在不同的语言的语法都有可能不同。另外，不同数据库中的 SELECT 、INSERT、语法都有一些不同处，这些不同之处，往往让程序员不知所措，老是要停下来思考一下，现在用的是什么语言用的是什么语法。</p>
+<h3>运行问题</h3>
+<p>　　定义、语法这些都是显式出错，相对好解决。但是运行中出现错误就五花八门了，我试着归纳一下：
+　　运行中程序突然中断了并退出了。往往是内存出错！可查变量、指针是否越界，指针是否为空等、例外没有处理。
+环境问题。例如，数据库密码错导致数据库打开不了、要打开的文件不存在、参数定义错，参数表为空，参数表没有缺省值等。</p>
+<p>程序的输出的不是自己的预期结果。往往是程序逻辑和算法存在问题。<br>程序不停地运行没有停止的迹象。查一下循环的条件表达式是否永真、导致死循环。<br>程序无法退出。程序乱了，导致内存错，覆盖了退出指令！<br>程序运行了很长时间才出现了错误。累计误差、数据原因造成的错误等。  </p>
+<p>　　出错是必然的，如何找出错误，有些人编写 C 语言的人只会用在可能出错的语言前后，通过显示语句 print 来判别出错的原因。他们不懂 debug、 sdb、 dbx 等调试工具，来调试程序，他们会编不会调。我们很难想象不会调试的程序员是如何编程的，调试对于程序员如此重要，以致于可导致出“不会调试的程序员就不是程序员”的结论。</p>
+<p>　　现在的开发语言具有功能丰富的调试命令。无论用什么设计语言调试，你只要注意掌握以下几个命令或操作，就能入门调试了：</p>
+<p>运行程序<br>设置断点、取消断点<br>运行到断点<br>单步跟踪（setp into）<br>单步执行（step over）<br>显示变量、对象、源程序<br>退出调试  </p>
+<p>你可以按此去寻找相应的命令和操作，并熟记于心中！此法必有大用。</p>
+<p>　　通过调试，程序员可以学会如何运用断点、如何最快地找到可疑语句，如何很迅速地找到问题所在从而改进程序。而不断地调试，使得程序员不停进行调试操作，变成了操作高手。调试内容可以说千变万化，技巧也多多，关键看程序员的积累。例如，循环语句调试的技巧、同步异步调试的技巧、中断调试技巧、外设调试技巧、数据库调试技巧、边界调试技巧、例外调试技巧、屏蔽法调试技巧、替代法调试技巧、接口调试技巧等等。</p>
+<p>　　调试象开车一样，不会开的时候，程序员有恐惧感，会开了以后，程序员特别想调，开多了，程序员越发老练，调试操作越来越快、对问题发生的原因和纠正方法也熟记于心中，技巧也油然而生，积累越来越多。</p>
+<p>　　好的程序员不但调试自己的程序，而且会帮助其他程序员解决调不出来的程序的问题。程序员在帮助别人的时候，更能尽显调试才华，成为真正的调试高手。</p>
+<p>　　调试总的目标是为了纠正程序的错误。但是，调试也可用于其他的用途。例如，我经常会先把函数的调用语句给写好，但是不写函数体，这样每次编译都会出现函数没有发现的提示。我不写函数体的目的，就是让每次编译的时候提示我还有多少函数没有编写。让我对这个函数加深印象，给我有时间思考这个函数如何编写。当其他语句编写完后，我再一个一个把没有编写的函数内容补上，这个时候编写就快的多了。有的时候，我还喜欢看到几十条上百条的出错提示，然后，我感觉于一个改错就能消灭几十个错误的快感之中，然后再改再调，直到无错。调试成了我娱乐编程的一部分。</p>
+<p>　　通过调试你也会发现：编程水平直接影响到调试。如果程序很具有模块性，调试起来就很快，几个或十几个单步执行就会到达程序的任何地方，如果程序本身逻辑性不强，变量命名不准确、一个函数内语句有数十条数百条，那你几百个单步执行都到达不了你想要达到的地方，程序调试起来就会很麻烦，而且不容易定位出错的地方。所以调试高手往往会改进自己的编程，使得编程水平日益提高，成为编程高手。</p>
+<p>来源：<a href="http://kb.cnblogs.com/page/145911/"><a href="http://kb.cnblogs.com/page/145911/">http://kb.cnblogs.com/page/145911/</a></a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/读书笔记/">读书笔记</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+    
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+<strong>
+</strong>
+
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"billoway"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:billoway.cn/blog/">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
+  
+    <li><a href="/tags/Xcode/">Xcode</a><small>3</small></li>
+  
+    <li><a href="/tags/blog/">blog</a><small>2</small></li>
+  
+    <li><a href="/tags/ios/">ios</a><small>5</small></li>
+  
+    <li><a href="/tags/新闻/">新闻</a><small>1</small></li>
+  
+    <li><a href="/tags/读书笔记/">读书笔记</a><small>6</small></li>
+  
+    <li><a href="/tags/随手/">随手</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 billoway
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+</body>
+</html>
