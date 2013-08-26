@@ -21,18 +21,26 @@
   <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">点滴</a></h1>
-  <h2><a href="/">写生活、记工作</a></h2>
+  <div id="container" class="container">
+    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
+  <a href="/">
+    <img class="circle" src="/img/koala.jpg" alt="Anthem">
+  </a>
+  <h1 id="site-title" class="title">
+    <a href="/">点滴</a>
+  </h1>
 </div>
-<nav id="main-nav" class="alignright">
+<a href="#" id="toggle">信息</a>
+<div class="about" style="display: none">
+  <p>写生活、记工作</p>
+</div>
+<nav class="menu-navigation-container">
   <ul>
     
       <li><a href="/">Home</a></li>
@@ -40,387 +48,478 @@
       <li><a href="/archives">Archives</a></li>
     
   </ul>
-  <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+<div class="widget">
   
-  <div class="post-content">
-    <header>
+  
+
+  
+<nav class="tags">
+  <h3 class="title">Tags</h3>
+  <ul>
+  
+    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
+  
+    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
+  
+    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
+  
+    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
+  
+    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
+  
+  </ul>
+</nav>
+
+
+</div></header>
+    <section id="content" class="blog">
       
-        <div class="icon"></div>
-        <time datetime="2013-08-05T03:08:47.000Z"><a href="/blog/1375672104.html">Aug 5 2013</a></time>
-      
-      
+  <article class="post">
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1375672104.html">Xcode创建子工程以及工程依赖</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>当框架变得臃肿庞大的时候，一些公共的子工程就显得尤为重要了。<br>Xcode 创建子工程以及工程依赖。<br>参考：<a href="http://www.ganlvji.com/?p=128"><a href="http://www.ganlvji.com/?p=128">http://www.ganlvji.com/?p=128</a></a></p>
+    
+  </header>
+  <section class="entry">
+    
+      <p>当框架变得臃肿庞大的时候，一些公共的子工程就显得尤为重要了。<br>Xcode 创建子工程以及工程依赖。<br>参考：<a href="http://www.ganlvji.com/?p=128"><a href="http://www.ganlvji.com/?p=128">http://www.ganlvji.com/?p=128</a></a></p>
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1375672104.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-08-05T03:08:47.000Z"><a href="/blog/1375672104.html">Aug 5 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/XCode/">#XCode</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1375672104.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-28T15:36:40.000Z"><a href="/blog/1372865915.html">Jun 28 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1372865915.html">先要好代码？还是好产品？【读书笔记】</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>我想表达的是一个先后顺序的问题，并非是重要程度。<br>好的产品能让技术重要起来。做项目，特别是创业项目，实现好的点子总是一件令人抓狂的事情。明明非常有经验，为什么还是总延期呢？看上去没有技术难度，却很容易陷入到实现细节中出不来呢。
-      
-    </div>
-    <footer>
-      
+    
+  </header>
+  <section class="entry">
+    
+      <p>我想表达的是一个先后顺序的问题，并非是重要程度。<br>好的产品能让技术重要起来。做项目，特别是创业项目，实现好的点子总是一件令人抓狂的事情。明明非常有经验，为什么还是总延期呢？看上去没有技术难度，却很容易陷入到实现细节中出不来呢。
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1372865915.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-28T15:36:40.000Z"><a href="/blog/1372865915.html">Jun 28 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1372865915.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-27T08:33:36.000Z"><a href="/blog/1372262400.html">Jun 27 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1372262400.html">俄罗斯方块 【读书笔记】</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>犯下的错误会积累，获得的成功会消失。<br>俄罗斯方块教给我们的道理果然没错……</p>
+    
+  </header>
+  <section class="entry">
+    
+      <p>犯下的错误会积累，获得的成功会消失。<br>俄罗斯方块教给我们的道理果然没错……</p>
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1372262400.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-27T08:33:36.000Z"><a href="/blog/1372262400.html">Jun 27 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1372262400.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-19T08:37:08.000Z"><a href="/blog/1371495015.html">Jun 19 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1371495015.html">修改 iPhone Simulator Applications 位置</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>Mac 盘太小，硬盘寿命有限。对一些下载类或资源较大应用暴力测试阶段，总是很心疼。想到把模拟器的 Applications 位置改到 HDD，苦于 Xcode 无相关设置项，今天心血来潮，用 ln 试一下，还真可以，linux 学的不好啊，不然早解决问题了。<br>
-      
-    </div>
-    <footer>
-      
+    
+  </header>
+  <section class="entry">
+    
+      <p>Mac 盘太小，硬盘寿命有限。对一些下载类或资源较大应用暴力测试阶段，总是很心疼。想到把模拟器的 Applications 位置改到 HDD，苦于 Xcode 无相关设置项，今天心血来潮，用 ln 试一下，还真可以，linux 学的不好啊，不然早解决问题了。<br>
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1371495015.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-19T08:37:08.000Z"><a href="/blog/1371495015.html">Jun 19 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/Mac/">#Mac</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1371495015.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-15T15:08:20.000Z"><a href="/blog/1371223000.html">Jun 15 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1371223000.html">你的老板会因为你拼命编写代码而感谢你吗？ 【读书笔记】</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>程序员热衷于长时间地工作。我想说的是，你就承认吧，你的工作 / 老板并没有让你这样做，你自己要这样做而已。当然，我知道，也许并非所有程序员都喜欢长时间的编程。不过肯定的是，随着加班成为业内的普遍现象，至少一半的程序员必须喜欢加班，不是吗？
-      
-    </div>
-    <footer>
-      
+    
+  </header>
+  <section class="entry">
+    
+      <p>程序员热衷于长时间地工作。我想说的是，你就承认吧，你的工作 / 老板并没有让你这样做，你自己要这样做而已。当然，我知道，也许并非所有程序员都喜欢长时间的编程。不过肯定的是，随着加班成为业内的普遍现象，至少一半的程序员必须喜欢加班，不是吗？
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1371223000.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-15T15:08:20.000Z"><a href="/blog/1371223000.html">Jun 15 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1371223000.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-13T15:01:13.000Z"><a href="/blog/1371028018.html">Jun 13 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1371028018.html">程序员如何成功的假装在很努力的工作 【读书笔记】</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>这篇文章要讲的是程序员如何假装在很努力的工作。<br>有两种完全不同的动机会促使一个程序员做这种假装：
+    
+  </header>
+  <section class="entry">
+    
+      <p>这篇文章要讲的是程序员如何假装在很努力的工作。<br>有两种完全不同的动机会促使一个程序员做这种假装：
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1371028018.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-13T15:01:13.000Z"><a href="/blog/1371028018.html">Jun 13 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1371028018.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-08T10:08:23.000Z"><a href="/blog/1370620800.html">Jun 8 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1370620800.html">编程高手与调试高手 【读书笔记】</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>业界总是有高手之说，高手成了程序员心中之偶像，成了程序员成长之目标。但是，现实中人们往往对自己所了解的程序员，很难认同为高手；人们反而对那些自己不了解的，甚至是道听途说的人会认作为高手了。高手，同武林高手一样，神秘之至。
+    
+  </header>
+  <section class="entry">
+    
+      <p>业界总是有高手之说，高手成了程序员心中之偶像，成了程序员成长之目标。但是，现实中人们往往对自己所了解的程序员，很难认同为高手；人们反而对那些自己不了解的，甚至是道听途说的人会认作为高手了。高手，同武林高手一样，神秘之至。
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1370620800.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-08T10:08:23.000Z"><a href="/blog/1370620800.html">Jun 8 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1370620800.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-03T04:19:56.000Z"><a href="/blog/1370188800.html">Jun 3 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1370188800.html">GTD 【读书笔记】</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>GTD 与拖延症</p>
+    
+  </header>
+  <section class="entry">
+    
+      <p>GTD 与拖延症</p>
 <p><a href="http://www.gtdlife.com">GTD 参考博客</a></p>
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1370188800.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-06-03T04:19:56.000Z"><a href="/blog/1370188800.html">Jun 3 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1370188800.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-05-27T15:47:28.000Z"><a href="/blog/1369584000.html">May 27 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1369584000.html">“移动互联网上最终没有在线或不在线的问题……</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>“移动互联网上最终没有在线或不在线的问题，所有的产品都是“同步”的。”<br>                          ———— <a href="http://www.chengxuyuans.com/it_industry/61372.html">手机 QQ 更新的背后：高估用户适应力</a></p>
+    
+  </header>
+  <section class="entry">
+    
+      <p>“移动互联网上最终没有在线或不在线的问题，所有的产品都是“同步”的。”<br>                          ———— <a href="http://www.chengxuyuans.com/it_industry/61372.html">手机 QQ 更新的背后：高估用户适应力</a></p>
 <p>腾讯的移动互联网，真的就是这么个趋势？或者说，移动互联网，就是这个未来？参不太透……</p>
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1369584000.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-05-27T15:47:28.000Z"><a href="/blog/1369584000.html">May 27 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/新闻/">#新闻</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1369584000.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
 
 
 
   <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-05-24T08:18:35.000Z"><a href="/blog/1369324800.html">May 24 2013</a></time>
-      
-      
+  <header>
+    
   
     <h1 class="title"><a href="/blog/1369324800.html">hexo</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>生活中，处处都是折腾。抛弃 Octopress，转到 <a href="http://zespia.tw/hexo/">hexo</a>。<br>相比 Octopress，<a href="http://zespia.tw/hexo/">hexo</a>不管是安装还是使用，都很简单。 官网的文档也很详细。<a href="http://zespia.tw/hexo/"><a href="http://zespia.tw/hexo">http://zespia.tw/hexo</a></a>
+    
+  </header>
+  <section class="entry">
+    
+      <p>生活中，处处都是折腾。抛弃 Octopress，转到 <a href="http://zespia.tw/hexo/">hexo</a>。<br>相比 Octopress，<a href="http://zespia.tw/hexo/">hexo</a>不管是安装还是使用，都很简单。 官网的文档也很详细。<a href="http://zespia.tw/hexo/"><a href="http://zespia.tw/hexo">http://zespia.tw/hexo</a></a>
 
-      
-    </div>
-    <footer>
-      
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
         
-          <div class="alignleft">
-            <a href="/blog/1369324800.html#more" class="more-link">Read More</a>
-          </div>
+        
+          <time datetime="2013-05-24T08:18:35.000Z"><a href="/blog/1369324800.html">May 24 2013</a></time>
         
         
+
+        
+  
+  <a href="/tags/blog/">#blog</a>
+
+
+      </div>
       
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+        <div class="alignright">
+          <a href="/blog/1369324800.html#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
-<strong>
-</strong>
+
 
 
 
@@ -431,54 +530,19 @@
     <a href="/page/2/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
-</nav></div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:billoway.cn/blog/">
-  </form>
-</div>
+</nav>
 
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a><small>3</small></li>
-  
-    <li><a href="/tags/blog/">blog</a><small>2</small></li>
-  
-    <li><a href="/tags/ios/">ios</a><small>5</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a><small>1</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a><small>6</small></li>
-  
-    <li><a href="/tags/随手/">随手</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+    </section>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
   
   &copy; 2013 billoway
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 

@@ -21,18 +21,26 @@
   <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">点滴</a></h1>
-  <h2><a href="/">写生活、记工作</a></h2>
+  <div id="container" class="container">
+    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
+  <a href="/">
+    <img class="circle" src="/img/koala.jpg" alt="Anthem">
+  </a>
+  <h1 id="site-title" class="title">
+    <a href="/">点滴</a>
+  </h1>
 </div>
-<nav id="main-nav" class="alignright">
+<a href="#" id="toggle">信息</a>
+<div class="about" style="display: none">
+  <p>写生活、记工作</p>
+</div>
+<nav class="menu-navigation-container">
   <ul>
     
       <li><a href="/">Home</a></li>
@@ -40,122 +48,91 @@
       <li><a href="/archives">Archives</a></li>
     
   </ul>
-  <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+<div class="widget">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-19T08:37:08.000Z"><a href="/blog/1371495015.html">Jun 19 2013</a></time>
-      
-      
+  
+
+  
+<nav class="tags">
+  <h3 class="title">Tags</h3>
+  <ul>
+  
+    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
+  
+    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
+  
+    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
+  
+    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
+  
+    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
+  
+  </ul>
+</nav>
+
+
+</div></header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
   
     <h1 class="title">修改 iPhone Simulator Applications 位置</h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>Mac 盘太小，硬盘寿命有限。对一些下载类或资源较大应用暴力测试阶段，总是很心疼。想到把模拟器的 Applications 位置改到 HDD，苦于 Xcode 无相关设置项，今天心血来潮，用 ln 试一下，还真可以，linux 学的不好啊，不然早解决问题了。<br><a name="more"></a></p>
+    
+  </header>
+  <section class="entry">
+    
+      <p>Mac 盘太小，硬盘寿命有限。对一些下载类或资源较大应用暴力测试阶段，总是很心疼。想到把模拟器的 Applications 位置改到 HDD，苦于 Xcode 无相关设置项，今天心血来潮，用 ln 试一下，还真可以，linux 学的不好啊，不然早解决问题了。<br><a name="more"></a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre>ln -s /Volumes/HDD/ios/DerivedData/Simulator /Users/bill/Library/Application<span class="command">\ </span>Support/iPhone<span class="command">\ </span>Simulator/6.1/Applications
 </pre></td></tr></table></figure>
-      
-    </div>
-    <footer>
-      
-        
-        
-  
-  <div class="tags">
-    <a href="/tags/Mac/">Mac</a>
-  </div>
-
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
     
+  </section>
+  <footer>
     
-    
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<strong>
-</strong>
-
-  <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"billoway"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->
-
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:billoway.cn/blog/">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a><small>3</small></li>
-  
-    <li><a href="/tags/blog/">blog</a><small>2</small></li>
-  
-    <li><a href="/tags/ios/">ios</a><small>5</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a><small>1</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a><small>6</small></li>
-  
-    <li><a href="/tags/随手/">随手</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
     <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+    
+      <div class="widget">
+        
+          <time datetime="2013-06-19T08:37:08.000Z"><a href="/blog/1371495015.html">Jun 19 2013</a></time>
+        
+        
+
+        
+  
+  <a href="/tags/Mac/">#Mac</a>
+
+
+        
+      </div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
   
   &copy; 2013 billoway
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 

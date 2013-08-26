@@ -21,18 +21,26 @@
   <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">点滴</a></h1>
-  <h2><a href="/">写生活、记工作</a></h2>
+  <div id="container" class="container">
+    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
+  <a href="/">
+    <img class="circle" src="/img/koala.jpg" alt="Anthem">
+  </a>
+  <h1 id="site-title" class="title">
+    <a href="/">点滴</a>
+  </h1>
 </div>
-<nav id="main-nav" class="alignright">
+<a href="#" id="toggle">信息</a>
+<div class="about" style="display: none">
+  <p>写生活、记工作</p>
+</div>
+<nav class="menu-navigation-container">
   <ul>
     
       <li><a href="/">Home</a></li>
@@ -40,27 +48,52 @@
       <li><a href="/archives">Archives</a></li>
     
   </ul>
-  <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+<div class="widget">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-06-08T10:08:23.000Z"><a href="/blog/1370620800.html">Jun 8 2013</a></time>
-      
-      
+  
+
+  
+<nav class="tags">
+  <h3 class="title">Tags</h3>
+  <ul>
+  
+    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
+  
+    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
+  
+    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
+  
+    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
+  
+    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
+  
+  </ul>
+</nav>
+
+
+</div></header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
   
     <h1 class="title">编程高手与调试高手 【读书笔记】</h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>业界总是有高手之说，高手成了程序员心中之偶像，成了程序员成长之目标。但是，现实中人们往往对自己所了解的程序员，很难认同为高手；人们反而对那些自己不了解的，甚至是道听途说的人会认作为高手了。高手，同武林高手一样，神秘之至。
+    
+  </header>
+  <section class="entry">
+    
+      <p>业界总是有高手之说，高手成了程序员心中之偶像，成了程序员成长之目标。但是，现实中人们往往对自己所了解的程序员，很难认同为高手；人们反而对那些自己不了解的，甚至是道听途说的人会认作为高手了。高手，同武林高手一样，神秘之至。
 <a name="more"></a>
 　　许多程序员都有这样的经历：无论自己编写什么很短很短的程序，一般是很难一次就能通过编译的；通过编译的其功能还不一定是正确的。我在很早就注意这样现象了，开始的时候，我还不信这个邪，还试着编写程序看看自己能否一次能否编译成功，为这个事还和别人打过赌呢！这当然是年轻时做过的事了。后来我渐渐明白了，编程出错是编程的一个重要的部分！出错是正常的，不出错才是不正常的。出错怎么办？当然是改错啦！不知道错在什么地方怎么办？当然是调试啦！调试于是和编程相依相伴了。程序员不但要会编写程序，还要会调试程序。</p>
 <p>　　程序出错一般有：未定义、语法、运行出错三个方面。</p>
@@ -87,98 +120,42 @@
 <p>　　通过调试你也会发现：编程水平直接影响到调试。如果程序很具有模块性，调试起来就很快，几个或十几个单步执行就会到达程序的任何地方，如果程序本身逻辑性不强，变量命名不准确、一个函数内语句有数十条数百条，那你几百个单步执行都到达不了你想要达到的地方，程序调试起来就会很麻烦，而且不容易定位出错的地方。所以调试高手往往会改进自己的编程，使得编程水平日益提高，成为编程高手。</p>
 <p>来源：<a href="http://kb.cnblogs.com/page/145911/"><a href="http://kb.cnblogs.com/page/145911/">http://kb.cnblogs.com/page/145911/</a></a></p>
 
-      
-    </div>
-    <footer>
-      
-        
-        
-  
-  <div class="tags">
-    <a href="/tags/读书笔记/">读书笔记</a>
-  </div>
-
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
     
+  </section>
+  <footer>
     
-    
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<strong>
-</strong>
-
-  <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"billoway"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->
-
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:billoway.cn/blog/">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a><small>3</small></li>
-  
-    <li><a href="/tags/blog/">blog</a><small>2</small></li>
-  
-    <li><a href="/tags/ios/">ios</a><small>5</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a><small>1</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a><small>6</small></li>
-  
-    <li><a href="/tags/随手/">随手</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
     <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+    
+      <div class="widget">
+        
+          <time datetime="2013-06-08T10:08:23.000Z"><a href="/blog/1370620800.html">Jun 8 2013</a></time>
+        
+        
+
+        
+  
+  <a href="/tags/读书笔记/">#读书笔记</a>
+
+
+        
+      </div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
   
   &copy; 2013 billoway
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 

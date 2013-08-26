@@ -21,18 +21,26 @@
   <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">点滴</a></h1>
-  <h2><a href="/">写生活、记工作</a></h2>
+  <div id="container" class="container">
+    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
+  <a href="/">
+    <img class="circle" src="/img/koala.jpg" alt="Anthem">
+  </a>
+  <h1 id="site-title" class="title">
+    <a href="/">点滴</a>
+  </h1>
 </div>
-<nav id="main-nav" class="alignright">
+<a href="#" id="toggle">信息</a>
+<div class="about" style="display: none">
+  <p>写生活、记工作</p>
+</div>
+<nav class="menu-navigation-container">
   <ul>
     
       <li><a href="/">Home</a></li>
@@ -40,27 +48,52 @@
       <li><a href="/archives">Archives</a></li>
     
   </ul>
-  <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+<div class="widget">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2011-08-24T11:12:00.000Z"><a href="/blog/1314115200.html">Aug 24 2011</a></time>
-      
-      
+  
+
+  
+<nav class="tags">
+  <h3 class="title">Tags</h3>
+  <ul>
+  
+    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
+  
+    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
+  
+    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
+  
+    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
+  
+    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
+  
+  </ul>
+</nav>
+
+
+</div></header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
   
     <h1 class="title">iPhone上面编写具有root权限的程序</h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>正常途径下，我们编写的程序发布在 AppStore 上，使用官方规定的 SDK。但有些时候，正常途径实现不了的功能，可以在破解的 iphone 上面实现。以 Cydia 上文件管理软件 iFile 为例，iFile 可以修改系统的任何文件，这需要 iFile 具有 root 权限，在 iphone 没有破解的情况之下，是无论如何都实现不了的。
+    
+  </header>
+  <section class="entry">
+    
+      <p>正常途径下，我们编写的程序发布在 AppStore 上，使用官方规定的 SDK。但有些时候，正常途径实现不了的功能，可以在破解的 iphone 上面实现。以 Cydia 上文件管理软件 iFile 为例，iFile 可以修改系统的任何文件，这需要 iFile 具有 root 权限，在 iphone 没有破解的情况之下，是无论如何都实现不了的。
 <a name="more"></a></p>
 <p>对于 ios 系统，有两个目录会安装应用程序</p>
 <p>1、<code>/Application</code><br>2、<code>/var/mobile/Applications</code></p>
@@ -94,98 +127,42 @@
 取得 root 权限后，就可以做很多事情了，你的程序编写时候也要小心一点。在打包成 deb 时候，可以用脚本自动修改文件权限和所属. 权限修改的命令为 chmod，所属修改的命令为 chown。</p>
 <p>来源：<a href="http://o0o0o0o.iteye.com/blog/983311"><a href="http://o0o0o0o.iteye.com/blog/983311">http://o0o0o0o.iteye.com/blog/983311</a></a></p>
 
-      
-    </div>
-    <footer>
-      
-        
-        
-  
-  <div class="tags">
-    <a href="/tags/ios/">ios</a>
-  </div>
-
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
     
+  </section>
+  <footer>
     
-    
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<strong>
-</strong>
-
-  <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"billoway"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->
-
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:billoway.cn/blog/">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a><small>3</small></li>
-  
-    <li><a href="/tags/blog/">blog</a><small>2</small></li>
-  
-    <li><a href="/tags/ios/">ios</a><small>5</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a><small>1</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a><small>6</small></li>
-  
-    <li><a href="/tags/随手/">随手</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
     <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+    
+      <div class="widget">
+        
+          <time datetime="2011-08-24T11:12:00.000Z"><a href="/blog/1314115200.html">Aug 24 2011</a></time>
+        
+        
+
+        
+  
+  <a href="/tags/ios/">#ios</a>
+
+
+        
+      </div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
   
   &copy; 2013 billoway
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 

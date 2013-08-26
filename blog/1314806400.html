@@ -21,18 +21,26 @@
   <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">点滴</a></h1>
-  <h2><a href="/">写生活、记工作</a></h2>
+  <div id="container" class="container">
+    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
+  <a href="/">
+    <img class="circle" src="/img/koala.jpg" alt="Anthem">
+  </a>
+  <h1 id="site-title" class="title">
+    <a href="/">点滴</a>
+  </h1>
 </div>
-<nav id="main-nav" class="alignright">
+<a href="#" id="toggle">信息</a>
+<div class="about" style="display: none">
+  <p>写生活、记工作</p>
+</div>
+<nav class="menu-navigation-container">
   <ul>
     
       <li><a href="/">Home</a></li>
@@ -40,27 +48,52 @@
       <li><a href="/archives">Archives</a></li>
     
   </ul>
-  <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+<div class="widget">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2011-09-01T05:39:00.000Z"><a href="/blog/1314806400.html">Sep 1 2011</a></time>
-      
-      
+  
+
+  
+<nav class="tags">
+  <h3 class="title">Tags</h3>
+  <ul>
+  
+    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
+  
+    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
+  
+    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
+  
+    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
+  
+    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
+  
+    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
+  
+    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
+  
+  </ul>
+</nav>
+
+
+</div></header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
   
     <h1 class="title">class dump</h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <p>class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类 (category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读。
+    
+  </header>
+  <section class="entry">
+    
+      <p>class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类 (category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读。
 <a name="more"></a></p>
 <p>为什么要使用 class-dump<br>对于好奇的人，是一个好工具。你可以看到闭源应用程序，框架 (framework) 和软件包 (bundle) 的设计。<br><a href="http://stevenygard.com/download/"><a href="http://stevenygard.com/download/">http://stevenygard.com/download/</a></a><br><a href="http://bitbucket.org/nygard/class-dump"><a href="http://bitbucket.org/nygard/class-dump">http://bitbucket.org/nygard/class-dump</a></a></p>
 <p>用法：<br>class-dump [options]<br>选项可以是  </p>
@@ -148,98 +181,42 @@ Objective-C 1.0 ABI(iPhone 用 2.0)<br>class-dump-z 完全用 C++ 重写，避�
 <span class="literal">-</span><span class="comment">H		\\</span> <span class="comment">分离头文件</span>
 <span class="literal">-</span><span class="comment">o</span> <span class="comment">&lt;dir&gt;		\\</span> <span class="comment">将头文件放到这个目录，而不是当前目录
 </pre></td></tr></table></figure>
-      
-    </div>
-    <footer>
-      
-        
-        
-  
-  <div class="tags">
-    <a href="/tags/ios/">ios</a>
-  </div>
-
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
     
+  </section>
+  <footer>
     
-    
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<strong>
-</strong>
-
-  <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"billoway"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->
-
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:billoway.cn/blog/">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Linux/">Linux</a><small>1</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a><small>1</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a><small>3</small></li>
-  
-    <li><a href="/tags/blog/">blog</a><small>2</small></li>
-  
-    <li><a href="/tags/ios/">ios</a><small>5</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a><small>1</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a><small>6</small></li>
-  
-    <li><a href="/tags/随手/">随手</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
     <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+    
+      <div class="widget">
+        
+          <time datetime="2011-09-01T05:39:00.000Z"><a href="/blog/1314806400.html">Sep 1 2011</a></time>
+        
+        
+
+        
+  
+  <a href="/tags/ios/">#ios</a>
+
+
+        
+      </div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
   
   &copy; 2013 billoway
   
 </div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 
