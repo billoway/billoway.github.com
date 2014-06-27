@@ -3,3 +3,6 @@ node_modules
 db.json
 .deploy
 public
+themes/pithiness
+themes/phase
+themes/.DS_Store
