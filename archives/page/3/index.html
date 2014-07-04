@@ -1,544 +1,326 @@
-<!DOCTYPE HTML>
-<html>
+
+  <!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>Page 3 | Archives | 点滴</title>
-  <meta name="author" content="billoway">
-  
-  <meta name="description" content="billoway">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-  <meta property="og:site_name" content="点滴"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-  
+    <title>Archives | 点滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="billoway">
+    
+    <meta name="description" content="billoway">
+    
+    
+    
+    
+    
+    
+    <link rel="apple-touch-icon" href="/img/appleicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/appleicon.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
+    <body>
+      <header>
+        <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="点滴" title="点滴"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="点滴">点滴</a></h1>
+				<h2 class="blog-motto">写生活、记工作</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					</li>
+                <li><div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div></li>
 
-<body>
-  <div id="container" class="container">
-    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
-  <a href="/">
-    <img class="circle" src="/img/koala.jpg" alt="Anthem">
-  </a>
-  <h1 id="site-title" class="title">
-    <a href="/">点滴</a>
-  </h1>
+				</ul>
+			</nav>	
 </div>
-<a href="#" id="toggle">信息</a>
-<div class="about" style="display: none">
-  <p>写生活、记工作</p>
-</div>
-<nav class="menu-navigation-container">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-</nav>
-<div class="widget">
-  
-  
 
-  
-<nav class="tags">
-  <h3 class="title">Tags</h3>
-  <ul>
-  
-    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
-  
-    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
-  
-    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
-  
-    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
-  
-  </ul>
-</nav>
-
-
-</div></header>
-    <section id="content" class="blog">
-      
-<h2 class="archive-title">Archives</h2>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1332864000.html">Mac最近打开过的项目</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>Mac 有一个特别有用的 Stack，“最近打开过的项目”，建立方法如下：</p>
-<p>打开 Terminal，输入以下命令:</p>
-<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="comment">defaults</span> <span class="comment">write</span> <span class="comment">com</span>.<span class="comment">apple</span>.<span class="comment">dock</span> <span class="comment">persistent</span>-<span class="comment">others</span> <span class="literal">-</span><span class="comment">array</span>-<span class="comment">add</span> <span class="comment">'{</span> <span class="comment">"tile</span>-<span class="comment">data"</span> <span class="comment">=</span> <span class="comment">{</span> <span class="comment">"list</span>-<span class="comment">type"</span> <span class="comment">=</span> <span class="comment">1;</span> <span class="comment">};</span> <span class="comment">"tile</span>-<span class="comment">type"</span> <span class="comment">=</span> <span class="comment">"recents</span>-<span class="comment">tile";</span> <span class="comment">}'&lt;!</span>-<span class="literal">-</span> <span class="comment">more</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">&gt;
-</pre></td></tr></table></figure>
-然后再输入：</p>
-<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">Killall</span> Dock
-</pre></td></tr></table></figure>
- 搞定。</p>
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2012-03-28T08:36:00.000Z"><a href="/blog/1332864000.html">Mar 28 2012</a></time>
-        
+      </header>
+      <div id="container" class="clearfix">
         
 
-        
+<div class="archive-title" >
+  <h2 class="archive-icon">归档</h2>
   
-  <a href="/tags/Mac/">#Mac</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1332864000.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1328630400.html">iOS的icon、default及图片处理方法</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <h4>Icon</h4>
-<p> 命名方法，举例</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre> Icon<span class="preprocessor">.png</span>				<span class="number">57</span>×<span class="number">57</span>
- Icon-<span class="number">72.</span>png			<span class="number">72</span>×<span class="number">72</span>
- Icon-Small<span class="preprocessor">.png</span>			<span class="number">29</span>×<span class="number">29</span>
- Icon-Small-<span class="number">50.</span>png		<span class="number">50</span>×<span class="number">50</span>
- Icon<span class="localvars">@2</span><span class="built_in">x</span><span class="preprocessor">.png</span>			<span class="number">114</span>×<span class="number">114</span>
- Icon-Small<span class="localvars">@2</span><span class="built_in">x</span><span class="preprocessor">.png</span>		<span class="number">58</span>×<span class="number">58</span>
- iTunesArtwork			<span class="number">512</span>×<span class="number">512</span>
-</pre></td></tr></table></figure>
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2012-02-08T05:53:00.000Z"><a href="/blog/1328630400.html">Feb 8 2012</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/ios/">#ios</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1328630400.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1323964800.html">Linux下特别权限位-setuid，setgid，sticky</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>通常，我们用八进制表示一个权限时，如 644 或者 755，省略了最前面的一个特别权限位，完整地表示是 0644 或者 0755，而第一位就是特别权限位。这里着重要说的是三个特别权限位：setuid，setgid 和 sticky 位。
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-12-15T16:08:00.000Z"><a href="/blog/1323964800.html">Dec 16 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/Linux/">#Linux</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1323964800.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1322668800.html">Lion 安装xcode3.2.x</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <ol>
-<li>加载 xcode 3.2.x 的 dmg 文件  </li>
-<li>在 pkg 文件上右键，打开终端  </li>
-<li>在终端中输入以下命令：<br>
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-12-01T12:21:00.000Z"><a href="/blog/1322668800.html">Dec 1 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/Xcode/">#Xcode</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1322668800.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1316016000.html">使用Bash脚本将build好的程序部署到iPhone上</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>无 IDP ,iphone 需要越狱。具体的方法是先用 scp 命令将编译好的 app 复制到 iPhone 的 Applications 目录，然后用 ssh 服务连到 iPhone 上，使用 ldid 命令给 app 签注，再杀掉 SpringBoard 进程刷新界面。
-每次部署时只需使用脚本，以 iPhone 的 IP 地址作为参数即可（iPhone 上要求先安装 SSH 服务）。
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-09-15T07:27:00.000Z"><a href="/blog/1316016000.html">Sep 15 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/ios/">#ios</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1316016000.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1314806400.html">class dump</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类 (category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读。
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-09-01T05:39:00.000Z"><a href="/blog/1314806400.html">Sep 1 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/ios/">#ios</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1314806400.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1314115200.html">iPhone上面编写具有root权限的程序</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>正常途径下，我们编写的程序发布在 AppStore 上，使用官方规定的 SDK。但有些时候，正常途径实现不了的功能，可以在破解的 iphone 上面实现。以 Cydia 上文件管理软件 iFile 为例，iFile 可以修改系统的任何文件，这需要 iFile 具有 root 权限，在 iphone 没有破解的情况之下，是无论如何都实现不了的。
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-08-24T11:12:00.000Z"><a href="/blog/1314115200.html">Aug 24 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/ios/">#ios</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1314115200.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1313856000.html">iOS Address Book API 结构图型</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>iOS Address Book API 结构图型.
-最近在搞通讯录，翻出来。</p>
-<!-- <img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> -->
-
-<img src="/images/address-api.jpg" class="AddressBoook-API" width="1078" height="330" title="ios AddressBoook 结构图型">
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-08-21T11:05:00.000Z"><a href="/blog/1313856000.html">Aug 21 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/ios/">#ios</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1313856000.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-  
-    <h1 class="title"><a href="/blog/1309968000.html">Xcode使用svn</a></h1>
-  
-
-    
-  </header>
-  <section class="entry">
-    
-      <p>Mac OS 自带 SVN。如果不对 SVN 进行配置，即使在 Xcode 中配置了 SCM，在 Xcode 中使用 SVN 也会有问题。</p>
-<p>1 、打开 SVN 的配置文件  <code>～/.subversion/config</code>   注意：如果 <code>.subversion</code> 目录不存在，请运行 <code>subversion</code> 命令，虽然此命令会失败，但是会为你创建所需要的文件。  
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="alignleft widget">
-        
-        
-          <time datetime="2011-07-07T06:24:00.000Z"><a href="/blog/1309968000.html">Jul 7 2011</a></time>
-        
-        
-
-        
-  
-  <a href="/tags/Xcode/">#Xcode</a>
-
-
-      </div>
-      
-        <div class="alignright">
-          <a href="/blog/1309968000.html#more" class="more-link">Read More</a>
-        </div>
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-
-  
-<nav id="pagination">
-  
-    <a href="/archives/page/2/" class="alignleft prev">Prev</a>
-  
-  
-  <div class="clearfix"></div>
-</nav>
-
-
-    </section>
-    <footer id="footer" class="clearfix footer"><div class="alignleft">
-  
-  &copy; 2013 billoway
+  <div class="archiveslist archive-float clearfix">
+   <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08">八月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06">六月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05">五月 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04">四月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11">十一月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10">十月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08">八月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07">七月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05">五月 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03">三月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02">二月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12">十二月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09">九月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08">八月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07">七月 2011</a><span class="archive-list-count">1</span></li></ul>
+ </div>
   
 </div>
-<div class="clearfix"></div></footer>
+<div id="main" class="archive-part clearfix">
+  <div id="archive-page">
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1328630400.html" title="iOS的icon、default及图片处理方法" itemprop="url">
+      
+        iOS的icon、default及图片处理方法
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2012-02-08T05:53:00.000Z" itemprop="datePublished">2012-02-08</time>
+      
+          <a href="/blog/1328630400.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1323964800.html" title="Linux下特别权限位-setuid，setgid，sticky" itemprop="url">
+      
+        Linux下特别权限位-setuid，setgid，sticky
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-12-15T16:08:00.000Z" itemprop="datePublished">2011-12-16</time>
+      
+          <a href="/blog/1323964800.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1322668800.html" title="Lion 安装xcode3.2.x" itemprop="url">
+      
+        Lion 安装xcode3.2.x
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-12-01T12:21:00.000Z" itemprop="datePublished">2011-12-01</time>
+      
+          <a href="/blog/1322668800.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1316016000.html" title="使用Bash脚本将build好的程序部署到iPhone上" itemprop="url">
+      
+        使用Bash脚本将build好的程序部署到iPhone上
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-09-15T07:27:00.000Z" itemprop="datePublished">2011-09-15</time>
+      
+          <a href="/blog/1316016000.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1314806400.html" title="class dump" itemprop="url">
+      
+        class dump
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-09-01T05:39:00.000Z" itemprop="datePublished">2011-09-01</time>
+      
+          <a href="/blog/1314806400.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1314115200.html" title="iPhone上面编写具有root权限的程序" itemprop="url">
+      
+        iPhone上面编写具有root权限的程序
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-08-24T11:12:00.000Z" itemprop="datePublished">2011-08-24</time>
+      
+          <a href="/blog/1314115200.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1313856000.html" title="iOS Address Book API 结构图型" itemprop="url">
+      
+        iOS Address Book API 结构图型
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-08-21T11:05:00.000Z" itemprop="datePublished">2011-08-21</time>
+      
+          <a href="/blog/1313856000.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/blog/1309968000.html" title="Xcode使用svn" itemprop="url">
+      
+        Xcode使用svn
+      </a>
+    </h1>
+    
+    <p class="article-more-link">
+      <time datetime="2011-07-07T06:24:00.000Z" itemprop="datePublished">2011-07-07</time>
+      
+          <a href="/blog/1309968000.html">read more&raquo;</a>
+      
+    </p>
+
+  </article>
+</section>
+
+
+  <nav id="page-nav" class="clearfix archive-nav">
+    <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
   </div>
-  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/main.js"></script>
+</div>
+
+      </div>
+      <footer><div id="footer" >
+
+</div>
+</footer>
+      <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
 
 
 
 
-</body>
-</html>
+
+
+
+    </body>
+   </html>

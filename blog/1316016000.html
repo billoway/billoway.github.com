@@ -1,114 +1,104 @@
-<!DOCTYPE HTML>
-<html>
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>使用Bash脚本将build好的程序部署到iPhone上 | 点滴</title>
-  <meta name="author" content="billoway">
-  
-  <meta name="description" content="billoway">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="使用Bash脚本将build好的程序部署到iPhone上"/>
-  <meta property="og:site_name" content="点滴"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-  
+    <title>使用Bash脚本将build好的程序部署到iPhone上 | 点滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="billoway">
+    
+    <meta name="description" content="无 IDP ,iphone 需要越狱。具体的方法是先用 scp 命令将编译好的 app 复制到 iPhone 的 Applications 目录，然后用 ssh 服务连到 iPhone 上，使用 ldid 命令给 app 签注，再杀掉 SpringBoard 进程刷新界面。 每次部署时只需使用脚本，以 iPhone 的 IP 地址作为参数即可（iPhone 上要求先安装 SSH 服务）。">
+    
+    
+    
+    
+    
+    
+    <link rel="apple-touch-icon" href="/img/appleicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/appleicon.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="点滴" title="点滴"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="点滴">点滴</a></h1>
+				<h2 class="blog-motto">写生活、记工作</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					</li>
+                <li><div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div></li>
 
-<body>
-  <div id="container" class="container">
-    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
-  <a href="/">
-    <img class="circle" src="/img/koala.jpg" alt="Anthem">
-  </a>
-  <h1 id="site-title" class="title">
-    <a href="/">点滴</a>
+				</ul>
+			</nav>	
+</div>
+
+    </header>
+    <div id="container" class="clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/blog/1316016000.html" title="使用Bash脚本将build好的程序部署到iPhone上" itemprop="url">使用Bash脚本将build好的程序部署到iPhone上</a>
   </h1>
-</div>
-<a href="#" id="toggle">信息</a>
-<div class="about" style="display: none">
-  <p>写生活、记工作</p>
-</div>
-<nav class="menu-navigation-container">
-  <ul>
+  <p class="article-author">By
     
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-</nav>
-<div class="widget">
-  
-  
+      <a href="http://billoway.cn/blog/" title="billoway">billoway</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2011-09-15T07:27:00.000Z" itemprop="datePublished">2011-09-15</time>
 
+    <!-- 
+  更新日期:<time datetime="2014-07-01T09:08:27.000Z" 
+ itemprop="dateModified">2014-07-01</time>
   
-<nav class="tags">
-  <h3 class="title">Tags</h3>
-  <ul>
-  
-    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
-  
-    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
-  
-    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
-  
-    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
-  
-  </ul>
-</nav>
+ -->
 
+  </p>
+</header>
 
-</div></header>
-    <section id="content" class="blog">
-      <article class="post">
-  <header>
-    
-  
-    <h1 class="title">使用Bash脚本将build好的程序部署到iPhone上</h1>
-  
+   
 
-    
-  </header>
-  <section class="entry">
-    
-      <p>无 IDP ,iphone 需要越狱。具体的方法是先用 scp 命令将编译好的 app 复制到 iPhone 的 Applications 目录，然后用 ssh 服务连到 iPhone 上，使用 ldid 命令给 app 签注，再杀掉 SpringBoard 进程刷新界面。
-每次部署时只需使用脚本，以 iPhone 的 IP 地址作为参数即可（iPhone 上要求先安装 SSH 服务）。
-<a name="more"></a>
-1. 生成名为 rsa 的密匙文件。
-<code>ssh-keygen -t rsa</code></p>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p> 无 IDP ,iphone 需要越狱。具体的方法是先用 scp 命令将编译好的 app 复制到 iPhone 的 Applications 目录，然后用 ssh 服务连到 iPhone 上，使用 ldid 命令给 app 签注，再杀掉 SpringBoard 进程刷新界面。<br> 每次部署时只需使用脚本，以 iPhone 的 IP 地址作为参数即可（iPhone 上要求先安装 SSH 服务）。<br><a id="more"></a></p>
 <ol>
-<li><p>在 iPhone 上建立.ssh 目录。
-<code>ssh root@iphoneipaddr &#39;mkdir -p .ssh&#39;</code></p>
+<li><p> 生成名为 rsa 的密匙文件。<br><code>ssh-keygen -t rsa</code></p>
 </li>
-<li><p>将 id_rsa.pub 文件拷贝到 iPhone 的目录上，这样使用 ssh 和 scp 命令连接 iPhone 时就不再需要每次输入 alpine 密码了。 
-<code>cat ~/.ssh/id_rsa.pub | ssh root@10.0.2.2 &#39;cat &gt;&gt; .ssh/authorized_keys&#39;</code></p>
+<li><p> 在 iPhone 上建立.ssh 目录。<br><code>ssh root@iphoneipaddr &#39;mkdir -p .ssh&#39;</code></p>
 </li>
-<li><p>建立 installApp.sh 文件，增加执行权限
-<code>chomd +x installApp.sh</code></p>
+<li><p> 将 id_rsa.pub 文件拷贝到 iPhone 的目录上，这样使用 ssh 和 scp 命令连接 iPhone 时就不再需要每次输入 alpine 密码了。<br><code>cat ~/.ssh/id_rsa.pub | ssh root@10.0.2.2 &#39;cat &gt;&gt; .ssh/authorized_keys&#39;</code></p>
 </li>
-<li><p>在 installApp.sh 文件中输入以下内容</p>
+<li><p> 建立 installApp.sh 文件，增加执行权限 <br><code>chomd +x installApp.sh</code></p>
+</li>
+<li><p> 在 installApp.sh 文件中输入以下内容 </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -122,56 +112,292 @@
 apppath=~/Documents/iPhone-source/foo-Project/build/Release-iphoneos/foo.app
 iphone=<span class="string">"<span class="variable">$1</span>"</span>
 <span class="comment"># login iphone to remove old files first</span>
-ssh -l <span class="string">"root"</span> <span class="string">"<span class="variable">$iphone</span>"</span> <span class="string">"rm -rf /Applications/foo.app"</span>
+ssh <span class="operator">-l</span> <span class="string">"root"</span> <span class="string">"<span class="variable">$iphone</span>"</span> <span class="string">"rm -rf /Applications/foo.app"</span>
 <span class="comment"># copy app files to iPhone machine</span>
 scp -r <span class="variable">$apppath</span> root@<span class="variable">$iphone</span>:/Applications
 <span class="comment"># login iphone to resign app and kill SpringBoard to force refresh</span>
-ssh -l <span class="string">"root"</span> <span class="string">"<span class="variable">$iphone</span>"</span> <span class="string">"cd /Applications/foo.app; ldid -s foo; killall 9 SpringBoard"</span>
+ssh <span class="operator">-l</span> <span class="string">"root"</span> <span class="string">"<span class="variable">$iphone</span>"</span> <span class="string">"cd /Applications/foo.app; ldid -s foo; killall 9 SpringBoard"</span>
 </pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p>保存之后，你就可以以 iPhone 的 IP 地址为参数执行脚本 <code>./installApp.sh 192.168.X.X</code> 来将 app 部署到 iPhone 上了.</p>
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="widget">
-        
-          <time datetime="2011-09-15T07:27:00.000Z"><a href="/blog/1316016000.html">Sep 15 2011</a></time>
-        
-        
-
-        
+<p> 保存之后，你就可以以 iPhone 的 IP 地址为参数执行脚本 <code>./installApp.sh 192.168.X.X</code> 来将 app 部署到 iPhone 上了.</p>
   
-  <a href="/tags/ios/">#ios</a>
+	</div>
+		<footer class="article-footer clearfix">
 
-
-        
-      </div>
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-    </section>
-    <footer id="footer" class="clearfix footer"><div class="alignleft">
+  <div class="article-tags">
   
-  &copy; 2013 billoway
-  
-</div>
-<div class="clearfix"></div></footer>
+  <span></span> <a href="/tags/ios/">ios</a>
   </div>
-  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/main.js"></script>
 
 
 
 
-</body>
+<div class="article-share" id="share">
+
+  <div data-url="http://billoway.cn/blog/blog/1316016000.html" data-title="使用Bash脚本将build好的程序部署到iPhone上 | 点滴" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/blog/1322668800.html" title="Lion 安装xcode3.2.x">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  Lion 安装xcode3.2.x</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/blog/1314806400.html"  title="class dump">
+ <strong>NEXT:</strong><br/> 
+ <span>class dump
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"crispelite"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</div>  
+      
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div id="authorInfo">
+	
+		<div class="author-logo"></div>		
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+</div>
+<aside class="clearfix">
+
+
+  
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08">八月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06">六月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05">五月 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04">四月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11">十一月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10">十月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08">八月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07">七月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05">五月 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03">三月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02">二月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12">十二月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09">九月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08">八月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07">七月 2011</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Mac/" title="Mac">Mac<sup>6</sup></a></li>
+		
+			<li><a href="/tags/XCode/" title="XCode">XCode<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Xcode/" title="Xcode">Xcode<sup>3</sup></a></li>
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>2</sup></a></li>
+		
+			<li><a href="/tags/ios/" title="ios">ios<sup>5</sup></a></li>
+		
+			<li><a href="/tags/新闻/" title="新闻">新闻<sup>1</sup></a></li>
+		
+			<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>6</sup></a></li>
+		
+			<li><a href="/tags/随手/" title="随手">随手<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"billoway"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
 </html>

@@ -1,101 +1,95 @@
-<!DOCTYPE HTML>
-<html>
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>class dump | 点滴</title>
-  <meta name="author" content="billoway">
-  
-  <meta name="description" content="billoway">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="class dump"/>
-  <meta property="og:site_name" content="点滴"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-  
+    <title>class dump | 点滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="billoway">
+    
+    <meta name="description" content="class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类(category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读。">
+    
+    
+    
+    
+    
+    
+    <link rel="apple-touch-icon" href="/img/appleicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/appleicon.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="点滴" title="点滴"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="点滴">点滴</a></h1>
+				<h2 class="blog-motto">写生活、记工作</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					</li>
+                <li><div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div></li>
 
-<body>
-  <div id="container" class="container">
-    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
-  <a href="/">
-    <img class="circle" src="/img/koala.jpg" alt="Anthem">
-  </a>
-  <h1 id="site-title" class="title">
-    <a href="/">点滴</a>
+				</ul>
+			</nav>	
+</div>
+
+    </header>
+    <div id="container" class="clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/blog/1314806400.html" title="class dump" itemprop="url">class dump</a>
   </h1>
-</div>
-<a href="#" id="toggle">信息</a>
-<div class="about" style="display: none">
-  <p>写生活、记工作</p>
-</div>
-<nav class="menu-navigation-container">
-  <ul>
+  <p class="article-author">By
     
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-</nav>
-<div class="widget">
-  
-  
+      <a href="http://billoway.cn/blog/" title="billoway">billoway</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2011-09-01T05:39:00.000Z" itemprop="datePublished">2011-09-01</time>
 
+    <!-- 
+  更新日期:<time datetime="2014-07-01T09:08:27.000Z" 
+ itemprop="dateModified">2014-07-01</time>
   
-<nav class="tags">
-  <h3 class="title">Tags</h3>
-  <ul>
-  
-    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
-  
-    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
-  
-    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
-  
-    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
-  
-  </ul>
-</nav>
+ -->
 
+  </p>
+</header>
 
-</div></header>
-    <section id="content" class="blog">
-      <article class="post">
-  <header>
-    
-  
-    <h1 class="title">class dump</h1>
-  
+   
 
-    
-  </header>
-  <section class="entry">
-    
-      <p>class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类 (category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读。
-<a name="more"></a></p>
-<p>为什么要使用 class-dump<br>对于好奇的人，是一个好工具。你可以看到闭源应用程序，框架 (framework) 和软件包 (bundle) 的设计。<br><a href="http://stevenygard.com/download/"><a href="http://stevenygard.com/download/">http://stevenygard.com/download/</a></a><br><a href="http://bitbucket.org/nygard/class-dump"><a href="http://bitbucket.org/nygard/class-dump">http://bitbucket.org/nygard/class-dump</a></a></p>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p>class dump 是一个命令行工具，用来监测存储在 Mach-O 二进制文件理的 Objective-C 运行时信息。它为类 (class)，分类(category) 和协议 (protocol) 生成声明信息。这些信息与 otool -ov 命令提供的信息是一样的，但表示得更像正常的 Objective-C 的声明，所以它更紧凑，更易读。<br><a id="more"></a></p>
+<p>为什么要使用 class-dump<br>对于好奇的人，是一个好工具。你可以看到闭源应用程序，框架 (framework) 和软件包 (bundle) 的设计。<br><a href="http://stevenygard.com/download/" target="_blank" rel="external">http://stevenygard.com/download/</a><br><a href="http://bitbucket.org/nygard/class-dump" target="_blank" rel="external">http://bitbucket.org/nygard/class-dump</a></p>
 <p>用法：<br>class-dump [options]<br>选项可以是  </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
@@ -110,27 +104,24 @@
 11
 12
 13
-</pre></td><td class="code"><pre>-a		<span class="command">\\</span> 显示实例变量偏移
--A		<span class="command">\\</span> 显示实现地址
-–arch <span class="special">&</span>lt;arch<span class="special">&</span>gt;		<span class="command">\\</span> 选择一个指定的架构，如 ppc, ppc7400, ppc64, i386, x86_64
--C <span class="special">&</span>lt;regex<span class="special">&</span>gt;		<span class="command">\\</span> 只显示同正则表达式匹配的类
--f <span class="special">&</span>lt;str<span class="special">&</span>gt;		<span class="command">\\</span> 在方法名中查找字符串
--H		<span class="command">\\</span> 在当前目录生成头文件，或者在用 -o 选项指定的目录生成
--I		<span class="command">\\</span> 对类，目录，协议 按照继承关系 (inheritance) 进行排序 (覆盖 -s 选项)
--o <span class="special">&</span>lt;dir<span class="special">&</span>gt;		<span class="command">\\</span> 为 -H 选项指定输出目录
--r		<span class="command">\\</span> 递归扩展 framework，并修复 VM 共享库
--s		<span class="command">\\</span> 按名称对 classes 和 categories 进行排序
--S		<span class="command">\\</span> 按名称对方法 (method) 进行排序
-–list-arches		<span class="command">\\</span> 类出文件中的 arches, 然后退出
-–sdk-root		<span class="command">\\</span> 指定 SDK root 路径（完全路径，或者 4.1, 4.0, 3.2, 10.6，10.5，3.1.3，3.1.2）
+</pre></td><td class="code"><pre>-<span class="ruby">a		\\ 显示实例变量偏移
+</span>-<span class="ruby"><span class="constant">A</span>		\\ 显示实现地址
+</span>–arch &lt;arch&gt;		\\ 选择一个指定的架构，如 ppc, ppc7400, ppc64, i386, x86_64
+-<span class="ruby"><span class="constant">C</span> &lt;regex&gt;		\\ 只显示同正则表达式匹配的类
+</span>-<span class="ruby">f &lt;str&gt;		\\ 在方法名中查找字符串
+</span>-<span class="ruby"><span class="constant">H</span>		\\ 在当前目录生成头文件，或者在用 -o 选项指定的目录生成
+</span>-<span class="ruby"><span class="constant">I</span>		\\ 对类，目录，协议 按照继承关系 (inheritance) 进行排序(覆盖 -s 选项)
+</span>-<span class="ruby">o &lt;dir&gt;		\\ 为 -<span class="constant">H</span>选项指定输出目录
+</span>-<span class="ruby">r		\\ 递归扩展 framework，并修复 <span class="constant">VM</span> 共享库
+</span>-<span class="ruby">s		\\ 按名称对 classes 和 categories 进行排序
+</span>-<span class="ruby"><span class="constant">S</span>		\\ 按名称对方法 (method) 进行排序
+</span>–list-arches		\\ 类出文件中的 arches, 然后退出
+–sdk-root		\\ 指定 SDK root 路径（完全路径，或者 4.1, 4.0, 3.2, 10.6，10.5，3.1.3，3.1.2）
 </pre></td></tr></table></figure>
 
-<p>class-dump-x 是一个 class-dump 的修改版，在当时（2008 年，class-dump 3.1.2 不支持 Objective-C 2.0 ABI)。 Objective-C 2.0 ABI 删除了 OBJC 段，在 data 段引入了一些新的 section。并且 class/obj 的布局也边了。它不生成 @property 声明，因为所有的 properties 被映射到方法了。不创建 @property 元素，这样的源码可以与 objc 1.0 的编译器兼容。<br>class_dump_z 是对上面两个的改进<br><a href="http://networkpx.googlecode.com/files/class-dump-z"><a href="http://networkpx.googlecode.com/files/class-dump-z">http://networkpx.googlecode.com/files/class-dump-z</a></a></p>
+<p>class-dump-x 是一个 class-dump 的修改版，在当时（2008 年，class-dump 3.1.2 不支持 Objective-C 2.0 ABI)。 Objective-C 2.0 ABI 删除了 OBJC 段，在 data 段引入了一些新的 section。并且 class/obj 的布局也边了。它不生成 @property 声明，因为所有的 properties 被映射到方法了。不创建 @property 元素，这样的源码可以与 objc 1.0 的编译器兼容。<br>class_dump_z 是对上面两个的改进<br><a href="http://networkpx.googlecode.com/files/class-dump-z" target="_blank" rel="external">http://networkpx.googlecode.com/files/class-dump-z</a></p>
 <p>为什么需要另外一个 class-dump</p>
-<p>因为 class-dump-x 对 ivar offsets 的计算也是错误的，并不支持 properties
-原版的 class-dump 虽然也支持 ABI2 了，但对 ivar 的计算依然是错误的
-class-dump-z 主要针对 iPhone 程序进行 dump, 不支持以下特性<br>64 位（除非以后 iPhone 上的内存超过 4G 了）
-Objective-C 1.0 ABI(iPhone 用 2.0)<br>class-dump-z 完全用 C++ 重写，避免动态调用，不像 class-dump 和 class-dump-x 那样使用 Objective-c 写。删除不必要的调用，使得 class-dump-z 比它的前任们快 10 倍左右。并且可以在 Linux，Mac, iPhone 上运行。</p>
+<p>因为 class-dump-x 对 ivar offsets 的计算也是错误的，并不支持 properties<br>原版的 class-dump 虽然也支持 ABI2 了，但对 ivar 的计算依然是错误的<br>class-dump-z 主要针对 iPhone 程序进行 dump, 不支持以下特性<br>64 位（除非以后 iPhone 上的内存超过 4G 了）<br>Objective-C 1.0 ABI(iPhone 用 2.0)<br>class-dump-z 完全用 C++ 重写，避免动态调用，不像 class-dump 和 class-dump-x 那样使用 Objective-c 写。删除不必要的调用，使得 class-dump-z 比它的前任们快 10 倍左右。并且可以在 Linux，Mac, iPhone 上运行。</p>
 <p>选项</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
@@ -156,70 +147,306 @@ Objective-C 1.0 ABI(iPhone 用 2.0)<br>class-dump-z 完全用 C++ 重写，避�
 22
 23
 24
-</pre></td><td class="code"><pre><span class="literal">-</span><span class="comment">p		\\</span> <span class="comment">转换未声明的 getters 和 setters 为 properties</span> 
-<span class="literal">-</span><span class="comment">h</span> <span class="comment">proto		\\</span> <span class="comment">隐藏那些已经出现在</span> <span class="comment">协议中的方法</span>
-<span class="literal">-</span><span class="comment">h</span> <span class="comment">super		\\</span> <span class="comment">隐藏继承来的方法</span>
-<span class="literal">-</span><span class="comment">y</span> <span class="comment">&lt;root&gt;		\\</span> <span class="comment">选择 sysroot</span>, <span class="comment">默认是最后一版的 iPhoneOS</span> <span class="comment">SDK</span> <span class="comment">或者</span> <span class="comment">/</span>
-<span class="literal">-</span><span class="comment">u</span> <span class="comment">&lt;arch&gt;		\\</span> <span class="comment">选择指定的架构 (</span> <span class="comment">armv6</span>, <span class="comment">armv7 等)</span>
-<span class="literal">-</span><span class="comment">a		\\</span> <span class="comment">打印 ivar</span> <span class="comment">偏移</span>
-<span class="literal">-</span><span class="comment">A		\\</span> <span class="comment">打印</span> <span class="comment">实现的 VM 地址</span>
-<span class="literal">-</span><span class="comment">k		\\</span> <span class="comment">显示额外的注释</span>
-<span class="literal">-</span><span class="comment">k</span> <span class="literal">-</span><span class="comment">k		\\</span> <span class="comment">显示更多注释</span>
-<span class="literal">-</span><span class="comment">R		\\</span> <span class="comment">显示指针声明</span> <span class="string">,</span> <span class="comment">int</span> <span class="comment">*a</span> <span class="comment">而不是</span> <span class="comment">int*</span> <span class="comment">a(因为前者更明显地表达了指针的语义)</span>
-<span class="literal">-</span><span class="comment">N		\\</span> <span class="comment">保持原始结构名</span> <span class="comment">（不用</span> <span class="comment">CFArrayRef 代替</span> <span class="comment">__CFArray)</span>
-<span class="literal">-</span><span class="comment">b		\\</span> <span class="comment">在</span> <span class="literal">+</span><span class="comment">/</span>- <span class="comment">号之后放一个空格</span>,  <span class="comment">也就是</span> <span class="literal">+</span> <span class="comment">(void)</span> <span class="comment">，而不是</span> <span class="literal">+</span><span class="comment">(void)</span>
-<span class="literal">-</span><span class="comment">i</span>  <span class="comment">&lt;file&gt;		\\</span> <span class="comment">读取并更新签名提示文件</span>
-<span class="literal">-</span><span class="comment">C</span>  <span class="comment">&lt;regex&gt;		\\</span> <span class="comment">只显示匹配的 types</span>
-<span class="literal">-</span><span class="comment">f</span>  <span class="comment">&lt;regex&gt;</span> <span class="comment">	\\</span> <span class="comment">只显示匹配的 methods</span>
-<span class="literal">-</span><span class="comment">g		\\</span> <span class="comment">只显示导出 classes</span>
-<span class="literal">-</span><span class="comment">X</span> <span class="comment">&lt;list&gt;	\\</span> <span class="comment">忽略所有 types(除了 categories)</span>
-<span class="literal">-</span><span class="comment">h</span> <span class="comment">cats		\\</span> <span class="comment">隐藏 categories</span>
-<span class="literal">-</span><span class="comment">h</span> <span class="comment">dogs		\\</span> <span class="comment">隐藏协议（这哥们太幽默了，上面是 cats（分类），这里就是 dogs 了</span>
-<span class="literal">-</span><span class="comment">S		\\</span> <span class="comment">将 types 按字幕顺序排序</span>
-<span class="literal">-</span><span class="comment">s		\\</span> <span class="comment">将方法按字母顺序排序</span>
-<span class="literal">-</span><span class="comment">z		\\</span> <span class="comment">按照字母顺序对方法排序，但将 class 方法和</span> <span class="literal">-</span><span class="comment">init</span> <span class="comment">放在最见面</span>
-<span class="literal">-</span><span class="comment">H		\\</span> <span class="comment">分离头文件</span>
-<span class="literal">-</span><span class="comment">o</span> <span class="comment">&lt;dir&gt;		\\</span> <span class="comment">将头文件放到这个目录，而不是当前目录
-</pre></td></tr></table></figure>
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="widget">
-        
-          <time datetime="2011-09-01T05:39:00.000Z"><a href="/blog/1314806400.html">Sep 1 2011</a></time>
-        
-        
+</pre></td><td class="code"><pre>-<span class="ruby">p		\\ 转换未声明的 getters 和 setters 为 properties 
+</span>-<span class="ruby">h proto		\\ 隐藏那些已经出现在 协议中的方法
+</span>-<span class="ruby">h <span class="keyword">super</span>		\\ 隐藏继承来的方法
+</span>-<span class="ruby">y &lt;root&gt;		\\ 选择 sysroot, 默认是最后一版的 iPhoneOS <span class="constant">SDK</span> 或者 /
+</span>-<span class="ruby">u &lt;arch&gt;		\\ 选择指定的架构(armv6, armv7 等)
+</span>-<span class="ruby">a		\\ 打印 ivar 偏移
+</span>-<span class="ruby"><span class="constant">A</span>		\\ 打印 实现的 <span class="constant">VM</span> 地址
+</span>-<span class="ruby">k		\\ 显示额外的注释
+</span>-<span class="ruby">k -k		\\ 显示更多注释
+</span>-<span class="ruby"><span class="constant">R</span>		\\ 显示指针声明 , int *a 而不是 int* a(因为前者更明显地表达了指针的语义)
+</span>-<span class="ruby"><span class="constant">N</span>		\\ 保持原始结构名 （不用 <span class="constant">CFArrayRef</span>代替 __CFArray)
+</span>-<span class="ruby">b		\\ 在 +<span class="regexp">/- 号之后放一个空格,  也就是 + (void) ，而不是 +(void)
+</span></span>-<span class="ruby">i  &lt;file&gt;		\\ 读取并更新签名提示文件
+</span>-<span class="ruby"><span class="constant">C</span>  &lt;regex&gt;		\\ 只显示匹配的 types
+</span>-<span class="ruby">f  &lt;regex&gt; 	\\ 只显示匹配的 methods
+</span>-<span class="ruby">g		\\ 只显示导出 classes
+</span>-<span class="ruby"><span class="constant">X</span> &lt;list&gt;	\\ 忽略所有 types(除了 categories)
+</span>-<span class="ruby">h cats		\\ 隐藏 categories
+</span>-<span class="ruby">h dogs		\\ 隐藏协议（这哥们太幽默了，上面是 cats（分类），这里就是 dogs 了
+</span>-<span class="ruby"><span class="constant">S</span>		\\ 将 types 按字幕顺序排序
+</span>-<span class="ruby">s		\\ 将方法按字母顺序排序
+</span>-<span class="ruby">z		\\ 按照字母顺序对方法排序，但将 <span class="class"><span class="keyword">class</span> 方法和 -<span class="title">init</span> 放在最见面</span>
+</span>-<span class="ruby"><span class="constant">H</span>		\\ 分离头文件
+</span>-<span class="ruby">o &lt;dir&gt;		\\ 将头文件放到这个目录，而不是当前目录</span>
+</pre></td></tr></table></figure>  
+	</div>
+		<footer class="article-footer clearfix">
 
-        
+  <div class="article-tags">
   
-  <a href="/tags/ios/">#ios</a>
-
-
-        
-      </div>
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-    </section>
-    <footer id="footer" class="clearfix footer"><div class="alignleft">
-  
-  &copy; 2013 billoway
-  
-</div>
-<div class="clearfix"></div></footer>
+  <span></span> <a href="/tags/ios/">ios</a>
   </div>
-  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/main.js"></script>
 
 
 
 
-</body>
+<div class="article-share" id="share">
+
+  <div data-url="http://billoway.cn/blog/blog/1314806400.html" data-title="class dump | 点滴" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/blog/1316016000.html" title="使用Bash脚本将build好的程序部署到iPhone上">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  使用Bash脚本将build好的程序部署到iPhone上</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/blog/1314115200.html"  title="iPhone上面编写具有root权限的程序">
+ <strong>NEXT:</strong><br/> 
+ <span>iPhone上面编写具有root权限的程序
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"crispelite"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</div>  
+      
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div id="authorInfo">
+	
+		<div class="author-logo"></div>		
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+</div>
+<aside class="clearfix">
+
+
+  
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08">八月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06">六月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05">五月 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04">四月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11">十一月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10">十月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08">八月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07">七月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05">五月 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03">三月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02">二月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12">十二月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09">九月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08">八月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07">七月 2011</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Mac/" title="Mac">Mac<sup>6</sup></a></li>
+		
+			<li><a href="/tags/XCode/" title="XCode">XCode<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Xcode/" title="Xcode">Xcode<sup>3</sup></a></li>
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>2</sup></a></li>
+		
+			<li><a href="/tags/ios/" title="ios">ios<sup>5</sup></a></li>
+		
+			<li><a href="/tags/新闻/" title="新闻">新闻<sup>1</sup></a></li>
+		
+			<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>6</sup></a></li>
+		
+			<li><a href="/tags/随手/" title="随手">随手<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"billoway"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
 </html>

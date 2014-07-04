@@ -1,110 +1,104 @@
-<!DOCTYPE HTML>
-<html>
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>iPhone上面编写具有root权限的程序 | 点滴</title>
-  <meta name="author" content="billoway">
-  
-  <meta name="description" content="billoway">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="iPhone上面编写具有root权限的程序"/>
-  <meta property="og:site_name" content="点滴"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="点滴" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-  
+    <title>iPhone上面编写具有root权限的程序 | 点滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="billoway">
+    
+    <meta name="description" content="正常途径下，我们编写的程序发布在 AppStore 上，使用官方规定的 SDK。但有些时候，正常途径实现不了的功能，可以在破解的 iphone 上面实现。以 Cydia 上文件管理软件 iFile 为例，iFile 可以修改系统的任何文件，这需要 iFile 具有 root 权限，在 iphone 没有破解的情况之下，是无论如何都实现不了的。">
+    
+    
+    
+    
+    
+    
+    <link rel="apple-touch-icon" href="/img/appleicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/appleicon.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/title.png" alt="点滴" title="点滴"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="点滴">点滴</a></h1>
+				<h2 class="blog-motto">写生活、记工作</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					</li>
+                <li><div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div></li>
 
-<body>
-  <div id="container" class="container">
-    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
-  <a href="/">
-    <img class="circle" src="/img/koala.jpg" alt="Anthem">
-  </a>
-  <h1 id="site-title" class="title">
-    <a href="/">点滴</a>
+				</ul>
+			</nav>	
+</div>
+
+    </header>
+    <div id="container" class="clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/blog/1314115200.html" title="iPhone上面编写具有root权限的程序" itemprop="url">iPhone上面编写具有root权限的程序</a>
   </h1>
-</div>
-<a href="#" id="toggle">信息</a>
-<div class="about" style="display: none">
-  <p>写生活、记工作</p>
-</div>
-<nav class="menu-navigation-container">
-  <ul>
+  <p class="article-author">By
     
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-</nav>
-<div class="widget">
-  
-  
+      <a href="http://billoway.cn/blog/" title="billoway">billoway</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2011-08-24T11:12:00.000Z" itemprop="datePublished">2011-08-24</time>
 
+    <!-- 
+  更新日期:<time datetime="2014-07-01T09:08:27.000Z" 
+ itemprop="dateModified">2014-07-01</time>
   
-<nav class="tags">
-  <h3 class="title">Tags</h3>
-  <ul>
-  
-    <li><a href="/tags/Linux/">Linux</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Mac/">Mac</a>&nbsp;<small>(7)</small></li>
-  
-    <li><a href="/tags/XCode/">XCode</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/Xcode/">Xcode</a>&nbsp;<small>(3)</small></li>
-  
-    <li><a href="/tags/blog/">blog</a>&nbsp;<small>(2)</small></li>
-  
-    <li><a href="/tags/ios/">ios</a>&nbsp;<small>(5)</small></li>
-  
-    <li><a href="/tags/新闻/">新闻</a>&nbsp;<small>(1)</small></li>
-  
-    <li><a href="/tags/读书笔记/">读书笔记</a>&nbsp;<small>(6)</small></li>
-  
-    <li><a href="/tags/随手/">随手</a>&nbsp;<small>(2)</small></li>
-  
-  </ul>
-</nav>
+ -->
 
+  </p>
+</header>
 
-</div></header>
-    <section id="content" class="blog">
-      <article class="post">
-  <header>
-    
-  
-    <h1 class="title">iPhone上面编写具有root权限的程序</h1>
-  
+   
 
-    
-  </header>
-  <section class="entry">
-    
-      <p>正常途径下，我们编写的程序发布在 AppStore 上，使用官方规定的 SDK。但有些时候，正常途径实现不了的功能，可以在破解的 iphone 上面实现。以 Cydia 上文件管理软件 iFile 为例，iFile 可以修改系统的任何文件，这需要 iFile 具有 root 权限，在 iphone 没有破解的情况之下，是无论如何都实现不了的。
-<a name="more"></a></p>
-<p>对于 ios 系统，有两个目录会安装应用程序</p>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p> 正常途径下，我们编写的程序发布在 AppStore 上，使用官方规定的 SDK。但有些时候，正常途径实现不了的功能，可以在破解的 iphone 上面实现。以 Cydia 上文件管理软件 iFile 为例，iFile 可以修改系统的任何文件，这需要 iFile 具有 root 权限，在 iphone 没有破解的情况之下，是无论如何都实现不了的。<br><a id="more"></a></p>
+<p> 对于 ios 系统，有两个目录会安装应用程序 </p>
 <p>1、<code>/Application</code><br>2、<code>/var/mobile/Applications</code></p>
-<p><code>/var/mobile/Applications</code>下的应用程序会有很多限制，似乎系统会认为此目录下的程序一定会运行在沙盒中，不管怎么设置权限也无用。/Application 目录下的程序限制会小一些，要取得 root 权限，第一步就是要将程序安装在 /Application 目录下。</p>
-<p>幸好有 cydia。系统破解之后，绝大多数都会安装上 cydia。自己搭建 cydia 源，第三方软件也可以通过 cydia 来发布。搭建 cydia 源中有一步是将编译出的程序打包成 deb。打包的时候，可以指定最终安装后的目录结构。至于如何搭建 cydia 源，google 一下会有详细的教程，这里不多说，下面已假设可以将程序安装在 /Application 目录下。</p>
-<p>先简单复习一下 unix 的权限管理，iOS 系统其实是个小的 unix。unix 下面每个文件都有自己所属，和访问权限。比如用户 complex_ok 是组 mobile 的成员，他登录的时候创建了一个文件 A，默认下，A 就属于用户 complex_ok，组为 mobile. 另外文件 A 还可以指定自己的访问权限，分成用户，组，其它人三个级别，三个级别都可以指定自身的 是否可读，是否可写，是否可执行。比如 文件 A 属于用户 complex_ok，组为 mobile，它的访问权限指定为 用户可读可写可执行，组可读可写，其他人为只读。这个时候用户 complex_ok 登录的时候，可以执行文件 A，如果用户 HelloKitty，也属于组 mobile，HelloKitty 对文件 A 可以进行读写，但不可以执行，而其它非同组的人，就只读。</p>
-<p>当我们使用 iphone 的时候，我们实际上是以用户 mobile，组 mobile 的身份登录的. 当某文件属于 root 用户，权限设为组和其它人都只读，正常时候就不能修改这文件。幸好 unix 还可以为文件的访问权限指定 setuid 位，这个位很重要, 比如可执行程序 A，程序也是文件，程序 A 是属于 root 用户的. 假设用户 mobile 运行程序 A，如果没有为程序 A 设置 setuid 位，程序 A 是以用户 mobile 的权限运行。 如果指定了 setuid 位，就算用户是 mobile，并非 root，但因为程序 A 是属于 root 用户的，程序 A 也可以以 root 的权限运行。</p>
-<p>明白 setuid 位的作用，似乎取得运行 root 权限的程序就很简单了。比如我们也想编写自己的文件管理程序 aFile，使 aFile 也运行在 root 权限，我们就将 aFile 程序的修改成属于 root 用户，再将权限位设置成可执行，并有 setuid 位. 使用 cydia 将程序安装到 /Application，用户点击 iFile 的图标，这样 iFile 就以 root 权限运行了。</p>
-<p>想法是好的，但是这样还不行。当用户点击程序的图标时，是通过 iphone 系统调用程序的，iphone 系统会有一个安全检查，它会检查到程序将以 root 权限运行应用程序，就不会执行，你会看到程序闪一下，就被结束了。</p>
-<p>所以我们还需要一个间接层，编写一个引导程序 A，再通过 A 调用 B。首先将 A 的权限设置为其它人可读可执行，B 的所属设置为 root，权限设置为其它人可读可执行，并有 setuid 为. 当用户点击图标，iphone 系统调用程序 A，它判断出程序 A 并没有 root 权限，正常执行，程序 A 这时候去调用 B，因为 B 是 A 调用的，程序 A 是我们自己写的，并不做安全检查，这样 B 有 setuid 位之后，所属为 root，就可以以 root 执行了。</p>
-<p>那如何使 iphone 系统调用引导程序 A 而不是调用正常程序 B 呢? 很简单，改改名字就可以了。比如你建立的工程为 aFile，正常编译出一个 aFile.app 文件，右键，显示包内容，将里面的可执行文件 aFile，修改名字为 aFile_，再将你的引导程序改成 aFile，这样安装之后，点击图标系统就会自动调用你的引导程序。 引导程序的编写很简单，大体为：</p>
+<p><code>/var/mobile/Applications</code> 下的应用程序会有很多限制，似乎系统会认为此目录下的程序一定会运行在沙盒中，不管怎么设置权限也无用。/Application 目录下的程序限制会小一些，要取得 root 权限，第一步就是要将程序安装在 /Application 目录下。</p>
+<p> 幸好有 cydia。系统破解之后，绝大多数都会安装上 cydia。自己搭建 cydia 源，第三方软件也可以通过 cydia 来发布。搭建 cydia 源中有一步是将编译出的程序打包成 deb。打包的时候，可以指定最终安装后的目录结构。至于如何搭建 cydia 源，google 一下会有详细的教程，这里不多说，下面已假设可以将程序安装在 /Application 目录下。</p>
+<p> 先简单复习一下 unix 的权限管理，iOS 系统其实是个小的 unix。unix 下面每个文件都有自己所属，和访问权限。比如用户 complex_ok 是组 mobile 的成员，他登录的时候创建了一个文件 A，默认下，A 就属于用户 complex_ok，组为 mobile. 另外文件 A 还可以指定自己的访问权限，分成用户，组，其它人三个级别，三个级别都可以指定自身的 是否可读，是否可写，是否可执行。比如 文件 A 属于用户 complex_ok，组为 mobile，它的访问权限指定为 用户可读可写可执行，组可读可写，其他人为只读。这个时候用户 complex_ok 登录的时候，可以执行文件 A，如果用户 HelloKitty，也属于组 mobile，HelloKitty 对文件 A 可以进行读写，但不可以执行，而其它非同组的人，就只读。</p>
+<p> 当我们使用 iphone 的时候，我们实际上是以用户 mobile，组 mobile 的身份登录的. 当某文件属于 root 用户，权限设为组和其它人都只读，正常时候就不能修改这文件。幸好 unix 还可以为文件的访问权限指定 setuid 位，这个位很重要, 比如可执行程序 A，程序也是文件，程序 A 是属于 root 用户的. 假设用户 mobile 运行程序 A，如果没有为程序 A 设置 setuid 位，程序 A 是以用户 mobile 的权限运行。 如果指定了 setuid 位，就算用户是 mobile，并非 root，但因为程序 A 是属于 root 用户的，程序 A 也可以以 root 的权限运行。</p>
+<p> 明白 setuid 位的作用，似乎取得运行 root 权限的程序就很简单了。比如我们也想编写自己的文件管理程序 aFile，使 aFile 也运行在 root 权限，我们就将 aFile 程序的修改成属于 root 用户，再将权限位设置成可执行，并有 setuid 位. 使用 cydia 将程序安装到 /Application，用户点击 iFile 的图标，这样 iFile 就以 root 权限运行了。</p>
+<p> 想法是好的，但是这样还不行。当用户点击程序的图标时，是通过 iphone 系统调用程序的，iphone 系统会有一个安全检查，它会检查到程序将以 root 权限运行应用程序，就不会执行，你会看到程序闪一下，就被结束了。</p>
+<p> 所以我们还需要一个间接层，编写一个引导程序 A，再通过 A 调用 B。首先将 A 的权限设置为其它人可读可执行，B 的所属设置为 root，权限设置为其它人可读可执行，并有 setuid 为. 当用户点击图标，iphone 系统调用程序 A，它判断出程序 A 并没有 root 权限，正常执行，程序 A 这时候去调用 B，因为 B 是 A 调用的，程序 A 是我们自己写的，并不做安全检查，这样 B 有 setuid 位之后，所属为 root，就可以以 root 执行了。</p>
+<p> 那如何使 iphone 系统调用引导程序 A 而不是调用正常程序 B 呢? 很简单，改改名字就可以了。比如你建立的工程为 aFile，正常编译出一个 aFile.app 文件，右键，显示包内容，将里面的可执行文件 aFile，修改名字为 aFile_，再将你的引导程序改成 aFile，这样安装之后，点击图标系统就会自动调用你的引导程序。 引导程序的编写很简单，大体为：</p>
 <p><figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -114,58 +108,292 @@
 7
 8
 9
-</pre></td><td class="code"><pre>int main(int argc, char *argv[])
-{
-    NSAutoreleasePool * pool = <span class="string">[[NSAutoreleasePool alloc] init];
-    NSString* string = [[NSBundle mainBundle] pathForResource:@"aFile_" ofType:nil];
-    argv[0] = (char*)[string UTF8String];
-    execve([string UTF8String], argv, NULL);
+</pre></td><td class="code"><pre><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])
+{<span class="built_in">NSAutoreleasePool</span> * pool = [[<span class="built_in">NSAutoreleasePool</span> alloc] init];
+    <span class="built_in">NSString</span>* string = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:@<span class="string">"aFile_"</span> ofType:<span class="literal">nil</span>];
+    argv[<span class="number">0</span>] = (<span class="keyword">char</span>*)[string UTF8String];
+    execve([string UTF8String], argv, <span class="literal">NULL</span>);
     [pool release];
-    return 0;
+    <span class="keyword">return</span> <span class="number">0</span>;
 }
-</pre></td></tr></table></figure>
-取得 root 权限后，就可以做很多事情了，你的程序编写时候也要小心一点。在打包成 deb 时候，可以用脚本自动修改文件权限和所属. 权限修改的命令为 chmod，所属修改的命令为 chown。</p>
-<p>来源：<a href="http://o0o0o0o.iteye.com/blog/983311"><a href="http://o0o0o0o.iteye.com/blog/983311">http://o0o0o0o.iteye.com/blog/983311</a></a></p>
-
-    
-  </section>
-  <footer>
-    
-    <div class="clearfix"></div>
-    
-      <div class="widget">
-        
-          <time datetime="2011-08-24T11:12:00.000Z"><a href="/blog/1314115200.html">Aug 24 2011</a></time>
-        
-        
-
-        
+</pre></td></tr></table></figure><br> 取得 root 权限后，就可以做很多事情了，你的程序编写时候也要小心一点。在打包成 deb 时候，可以用脚本自动修改文件权限和所属. 权限修改的命令为 chmod，所属修改的命令为 chown。</p>
+<p> 来源：<a href="http://o0o0o0o.iteye.com/blog/983311" target="_blank" rel="external">http://o0o0o0o.iteye.com/blog/983311</a></p>
   
-  <a href="/tags/ios/">#ios</a>
+	</div>
+		<footer class="article-footer clearfix">
 
-
-        
-      </div>
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-    </section>
-    <footer id="footer" class="clearfix footer"><div class="alignleft">
+  <div class="article-tags">
   
-  &copy; 2013 billoway
-  
-</div>
-<div class="clearfix"></div></footer>
+  <span></span> <a href="/tags/ios/">ios</a>
   </div>
-  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/main.js"></script>
 
 
 
 
-</body>
+<div class="article-share" id="share">
+
+  <div data-url="http://billoway.cn/blog/blog/1314115200.html" data-title="iPhone上面编写具有root权限的程序 | 点滴" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/blog/1314806400.html" title="class dump">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  class dump</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/blog/1313856000.html"  title="iOS Address Book API 结构图型">
+ <strong>NEXT:</strong><br/> 
+ <span>iOS Address Book API 结构图型
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"crispelite"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</div>  
+      
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div id="authorInfo">
+	
+		<div class="author-logo"></div>		
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+</div>
+<aside class="clearfix">
+
+
+  
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08">八月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06">六月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05">五月 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04">四月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11">十一月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10">十月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08">八月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07">七月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05">五月 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03">三月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02">二月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12">十二月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09">九月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08">八月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07">七月 2011</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Mac/" title="Mac">Mac<sup>6</sup></a></li>
+		
+			<li><a href="/tags/XCode/" title="XCode">XCode<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Xcode/" title="Xcode">Xcode<sup>3</sup></a></li>
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>2</sup></a></li>
+		
+			<li><a href="/tags/ios/" title="ios">ios<sup>5</sup></a></li>
+		
+			<li><a href="/tags/新闻/" title="新闻">新闻<sup>1</sup></a></li>
+		
+			<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>6</sup></a></li>
+		
+			<li><a href="/tags/随手/" title="随手">随手<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"billoway"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
 </html>
