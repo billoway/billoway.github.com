@@ -4,14 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Lion 安装xcode3.2.x | 点滴</title>
+    <title>Mac下eclipse调试 手动添加Android设备识别 | 点滴</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="billoway">
     
-    <meta name="description" content="加载 xcode 3.2.x 的 dmg 文件  
- 在 pkg 文件上右键，打开终端  
- 在终端中输入以下命令：">
+    <meta name="description" content="Mac 下用 Eclipse 做 Android 开发，手机识别不了。Mac 总是支持不够……">
     
     
     
@@ -62,18 +60,18 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/blog/1322668800.html" title="Lion 安装xcode3.2.x" itemprop="url">Lion 安装xcode3.2.x</a>
+      <a href="/blog/1432536274.html" title="Mac下eclipse调试 手动添加Android设备识别" itemprop="url">Mac下eclipse调试 手动添加Android设备识别</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://billoway.cn/blog/" title="billoway">billoway</a>
     </p>
   <p class="article-time">
-    <time datetime="2011-12-01T12:21:00.000Z" itemprop="datePublished">2011-12-01</time>
+    <time datetime="2014-08-23T17:50:49.000Z" itemprop="datePublished">2014-08-24</time>
 
     <!-- 
-  更新日期:<time datetime="2014-07-01T09:08:27.000Z" 
- itemprop="dateModified">2014-07-01</time>
+  更新日期:<time datetime="2014-08-24T16:36:54.000Z" 
+ itemprop="dateModified">2014-08-25</time>
   
  -->
 
@@ -90,32 +88,33 @@
 		
 		</div>
 		
-		<ol>
-<li> 加载 xcode 3.2.x 的 dmg 文件  </li>
-<li> 在 pkg 文件上右键，打开终端  </li>
-<li> 在终端中输入以下命令：<br><a id="more"></a><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+		<p>Mac 下用 Eclipse 做 Android 开发，手机识别不了。Mac 总是支持不够……<br><a id="more"></a></p>
+<p> 打包 APK，再安装到手机，可以测试用，但平时开发中不能联调。<br> 查了查有通过 wifi 连接调试的，麻烦的是，进行调试的手机要先装支持软件. </p>
+<p> 继续考虑回 usb，能不能通过手动添加 id 之类的方式让 adb 识别手机呢？<br> 答案是肯定的。</p>
+<p> 添加设备 ID，重启 adb 服务，再次查看设备列表，果然多了，名称不一定正确，不过确实可用。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
-</pre></td><td class="code"><pre><span class="keyword">export</span> COMMAND_LINE_INSTALL=<span class="number">1</span> 
-<span class="built_in">cd</span> /
-open <span class="string">"Volumes/Xcode and iOS SDK/Xcode and iOS SDK.mpkg"</span>
-</pre></td></tr></table></figure><br> 搞定！</li>
-</ol>
+4
+5
+</pre></td><td class="code"><pre>mkdir ~/<span class="preprocessor">.android</span>  
+echo <span class="string">"0x1782"</span> &gt; ~/<span class="preprocessor">.android</span>/adb_usb<span class="preprocessor">.ini</span>  
+adb kill-server
+adb start-server
+adb devices
+</pre></td></tr></table></figure>
+
+<p> 添加的是 厂商 ID，可以在“系统信息” - “USB”中查看。<br> 一般设备连接上，这里都能找得到，也就是说，前提是驱动没问题。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Xcode/">Xcode</a>
-  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://billoway.cn/blog/blog/1322668800.html" data-title="Lion 安装xcode3.2.x | 点滴" data-tsina="null" class="share clearfix">
+  <div data-url="http://billoway.cn/blog/blog/1432536274.html" data-title="Mac下eclipse调试 手动添加Android设备识别 | 点滴" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -124,19 +123,11 @@ open <span class="string">"Volumes/Xcode and iOS SDK/Xcode and iOS SDK.mpkg"</sp
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/blog/1323964800.html" title="Linux下特别权限位-setuid，setgid，sticky">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  Linux下特别权限位-setuid，setgid，sticky</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/blog/1316016000.html"  title="使用Bash脚本将build好的程序部署到iPhone上">
+<a href="/blog/1402743526.html"  title="Mavericks 升级记">
  <strong>NEXT:</strong><br/> 
- <span>使用Bash脚本将build好的程序部署到iPhone上
+ <span>Mavericks 升级记
 </span>
 </a>
 </div>
